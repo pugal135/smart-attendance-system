@@ -1,9 +1,9 @@
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 from typing import Optional, List
 
 class ParentCreate(BaseModel):
     name: str
-    email: EmailStr
+    email: str
     password: str
     phone: Optional[str] = None
     student_ids: List[str] = []

@@ -1,10 +1,10 @@
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 from typing import Optional, List
 
 class TutorCreate(BaseModel):
     name: str
     employee_id: str
-    email: EmailStr
+    email: str
     password: str
     phone: Optional[str] = None
     department_id: str

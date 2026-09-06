@@ -1,16 +1,16 @@
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 from typing import Optional
 
 class StudentCreate(BaseModel):
     name: str
     register_number: str # e.g. "26AIML001"
     roll_no: Optional[str] = None
-    email: EmailStr
+    email: str
     password: str
     phone: Optional[str] = None
     class_id: str
     parent_name: Optional[str] = None
-    parent_email: Optional[EmailStr] = None
+    parent_email: Optional[str] = None
     parent_phone: Optional[str] = None
     parent_relation: Optional[str] = "Parent"
     address: Optional[str] = None
