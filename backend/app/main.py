@@ -34,26 +34,22 @@ async def lifespan(app: FastAPI):
     await db_manager.connect()
     users_col = get_collection("users")
     settings_col = get_collection("settings")
+    tutors_col = get_collection("tutors")
     
-    # Initialize default admin if none exists
-    admin_user = await users_col.find_one({"role": "admin"})
-    if not admin_user:
-        default_admin = {
-            "email": "admin@college.edu",
-            "name": "System Administrator",
-            "role": "admin",
-            "phone": "+91 98765 43210",
-            "hashed_password": get_password_hash("admin123"),
-            "is_active": True
-        }
-        await users_col.insert_one(default_admin)
-        print("[INIT] Default Administrator created: admin@college.edu / admin123")
-        
-    # Initialize settings if empty
-    sys_set = await settings_col.find_one({})
-    if not sys_set:
-        await settings_col.insert_one(SystemSettingsModel().dict())
-        print("[INIT] Default Academic & Fine policy settings initialized.")
+    # Initialize full college database if tutors/classes are not seeded yet
+    tutor_count = await tutors_col.count_documents({})
+    if tutor_count < 9:
+        print("[AUTO-INIT] Seeding complete college data (9 classes, 9 tutors, 270 students, parents & fines)...")
+        try:
+            import sys
+            import os
+            sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            from seed_full_college_data import seed_full_college
+            await seed_full_college()
+        except Exception as e:
+            print(f"[AUTO-INIT] Warning during auto-seeding: {e}")
+    else:
+        print(f"[INIT] Database active with {tutor_count} tutors.")
         
     yield
     print("[SHUTDOWN] Application shutting down.")

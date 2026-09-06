@@ -1,6 +1,7 @@
-﻿import asyncio
+import asyncio
 import os
 import sys
+import csv
 from datetime import datetime, timedelta
 
 sys.stdout.reconfigure(line_buffering=True)
@@ -39,27 +40,22 @@ GIRL_NAMES = [
 INITIALS = ["K.", "S.", "M.", "R.", "G.", "T.", "N.", "B.", "A.", "V.", "P.", "J.", "C.", "E.", "D.", "L.", "H.", "Y."]
 
 CLASSES_DEF = [
-    {"name": "1st B.Sc AI & ML", "dept_code": "AI&ML", "year": 1, "sec": "A", "prefix": "26AIML", "tutor_name": "Prof. S. Rajesh", "tutor_email": "tutor123@gmail.com", "tutor_id_code": "TUT_AIML_01", "tutor_deg": "Associate Professor & Head"},
-    {"name": "2nd B.Sc AI & ML", "dept_code": "AI&ML", "year": 2, "sec": "A", "prefix": "25AIML", "tutor_name": "Dr. A. Meenakshi", "tutor_email": "meenakshi.faculty@college.edu", "tutor_id_code": "TUT_AIML_02", "tutor_deg": "Assistant Professor"},
-    {"name": "3rd B.Sc AI & ML", "dept_code": "AI&ML", "year": 3, "sec": "A", "prefix": "24AIML", "tutor_name": "Prof. M. Saravanan", "tutor_email": "saravanan.faculty@college.edu", "tutor_id_code": "TUT_AIML_03", "tutor_deg": "Assistant Professor"},
-    {"name": "1st BCA", "dept_code": "BCA", "year": 1, "sec": "A", "prefix": "26BCA", "tutor_name": "Dr. M. Deepa", "tutor_email": "deepa.faculty@college.edu", "tutor_id_code": "TUT_BCA_01", "tutor_deg": "Assistant Professor & Head"},
-    {"name": "2nd BCA", "dept_code": "BCA", "year": 2, "sec": "A", "prefix": "25BCA", "tutor_name": "Prof. P. Suresh", "tutor_email": "suresh.faculty@college.edu", "tutor_id_code": "TUT_BCA_02", "tutor_deg": "Assistant Professor"},
-    {"name": "3rd BCA", "dept_code": "BCA", "year": 3, "sec": "A", "prefix": "24BCA", "tutor_name": "Dr. K. Geetha", "tutor_email": "geetha.faculty@college.edu", "tutor_id_code": "TUT_BCA_03", "tutor_deg": "Assistant Professor"},
-    {"name": "1st B.Sc Computer Science", "dept_code": "CS", "year": 1, "sec": "A", "prefix": "26CS", "tutor_name": "Prof. V. Karthik", "tutor_email": "karthik.faculty@college.edu", "tutor_id_code": "TUT_CS_01", "tutor_deg": "Assistant Professor & Head"},
-    {"name": "2nd B.Sc Computer Science", "dept_code": "CS", "year": 2, "sec": "A", "prefix": "25CS", "tutor_name": "Prof. R. Vijay", "tutor_email": "vijay.faculty@college.edu", "tutor_id_code": "TUT_CS_02", "tutor_deg": "Assistant Professor"},
-    {"name": "3rd B.Sc Computer Science", "dept_code": "CS", "year": 3, "sec": "A", "prefix": "24CS", "tutor_name": "Dr. S. Balamurugan", "tutor_email": "balamurugan.faculty@college.edu", "tutor_id_code": "TUT_CS_03", "tutor_deg": "Assistant Professor"}
+    {"name": "1st B.Sc AI & ML", "dept_code": "AI&ML", "year": 1, "sec": "A", "prefix": "26AIML", "tutor_name": "Prof. S. Rajesh", "tutor_email": "tutor123@gmail.com", "tutor_id_code": "TUT_AIML_01", "tutor_deg": "Associate Professor & Head", "tutor_pass": "tutor123"},
+    {"name": "2nd B.Sc AI & ML", "dept_code": "AI&ML", "year": 2, "sec": "A", "prefix": "25AIML", "tutor_name": "Dr. A. Meenakshi", "tutor_email": "meenakshi.faculty@college.edu", "tutor_id_code": "TUT_AIML_02", "tutor_deg": "Assistant Professor", "tutor_pass": "Meenakshi@AIML2"},
+    {"name": "3rd B.Sc AI & ML", "dept_code": "AI&ML", "year": 3, "sec": "A", "prefix": "24AIML", "tutor_name": "Prof. M. Saravanan", "tutor_email": "saravanan.faculty@college.edu", "tutor_id_code": "TUT_AIML_03", "tutor_deg": "Assistant Professor", "tutor_pass": "Saravanan@AIML3"},
+    {"name": "1st BCA", "dept_code": "BCA", "year": 1, "sec": "A", "prefix": "26BCA", "tutor_name": "Dr. M. Deepa", "tutor_email": "deepa.faculty@college.edu", "tutor_id_code": "TUT_BCA_01", "tutor_deg": "Assistant Professor & Head", "tutor_pass": "Deepa@BCA1"},
+    {"name": "2nd BCA", "dept_code": "BCA", "year": 2, "sec": "A", "prefix": "25BCA", "tutor_name": "Prof. P. Suresh", "tutor_email": "suresh.faculty@college.edu", "tutor_id_code": "TUT_BCA_02", "tutor_deg": "Assistant Professor", "tutor_pass": "Suresh@BCA2"},
+    {"name": "3rd BCA", "dept_code": "BCA", "year": 3, "sec": "A", "prefix": "24BCA", "tutor_name": "Dr. K. Geetha", "tutor_email": "geetha.faculty@college.edu", "tutor_id_code": "TUT_BCA_03", "tutor_deg": "Assistant Professor", "tutor_pass": "Geetha@BCA3"},
+    {"name": "1st B.Sc Computer Science", "dept_code": "CS", "year": 1, "sec": "A", "prefix": "26CS", "tutor_name": "Prof. V. Karthik", "tutor_email": "karthik.faculty@college.edu", "tutor_id_code": "TUT_CS_01", "tutor_deg": "Assistant Professor & Head", "tutor_pass": "Karthik@CS1"},
+    {"name": "2nd B.Sc Computer Science", "dept_code": "CS", "year": 2, "sec": "A", "prefix": "25CS", "tutor_name": "Prof. R. Vijay", "tutor_email": "vijay.faculty@college.edu", "tutor_id_code": "TUT_CS_02", "tutor_deg": "Assistant Professor", "tutor_pass": "Vijay@CS2"},
+    {"name": "3rd B.Sc Computer Science", "dept_code": "CS", "year": 3, "sec": "A", "prefix": "24CS", "tutor_name": "Dr. S. Balamurugan", "tutor_email": "balamurugan.faculty@college.edu", "tutor_id_code": "TUT_CS_03", "tutor_deg": "Assistant Professor", "tutor_pass": "Balamurugan@CS3"}
 ]
 
 async def seed_full_college():
     print("[1/7] Connecting to database engine...", flush=True)
     await db_manager.connect()
 
-    print(" -> Precomputing password hashes...", flush=True)
-    hash_admin = get_password_hash("admin123")
-    hash_tutor = get_password_hash("tutor123")
-    hash_student = get_password_hash("student123")
-    hash_mother = get_password_hash("mother123")
-    hash_parent = get_password_hash("parent123")
+    credentials_export = []
 
     for c in ["users", "students", "parents", "tutors", "classes", "departments", "subjects", "attendance", "leaves", "fines", "clearances", "notifications", "audit_logs", "payments", "settings"]:
         await get_collection(c).delete_many({})
@@ -74,7 +70,7 @@ async def seed_full_college():
         "fine_amount_per_shortage": 500.0,
         "fine_due_days": 2,
         "consecutive_absence_alert_count": 3,
-        "upi_payee_address": "college.accounts@sbi",
+        "upi_payee_address": "7708881295@ptyes",
         "upi_payee_name": "Smart_College_Academic_Portal",
         "enable_email_alerts": True,
         "enable_sms_alerts": True,
@@ -83,14 +79,17 @@ async def seed_full_college():
 
     # 2. Admin
     users_col = get_collection("users")
+    admin_pass = "admin123"
+    admin_hash = get_password_hash(admin_pass)
     await users_col.insert_one({
         "email": "admin@college.edu",
         "name": "Dr. K. S. Ramanathan (Principal & Admin)",
         "role": "admin",
         "phone": "+91 98400 11223",
-        "hashed_password": hash_admin,
+        "hashed_password": admin_hash,
         "is_active": True
     })
+    credentials_export.append({"Role": "Admin", "Department/Class": "Administration", "Name": "Dr. K. S. Ramanathan", "Username/Email": "admin@college.edu", "Alternative ID": "ADMIN-01", "Password": admin_pass})
 
     # 3. Departments
     dept_col = get_collection("departments")
@@ -104,16 +103,18 @@ async def seed_full_college():
         res = await dept_col.insert_one(d)
         dept_map[d["code"]] = res.inserted_id
 
-    # 4. Tutors (9 dedicated tutors -> 1 per class)
+    # 4. Tutors (9 dedicated tutors with unique passwords)
     tutors_col = get_collection("tutors")
     tutor_map = {}
     for c_def in CLASSES_DEF:
+        t_pass = c_def["tutor_pass"]
+        t_hash = get_password_hash(t_pass)
         u_doc = {
             "email": c_def["tutor_email"],
             "name": c_def["tutor_name"],
             "role": "tutor",
             "phone": f"+91 94441 5566{CLASSES_DEF.index(c_def) + 1}",
-            "hashed_password": hash_tutor,
+            "hashed_password": t_hash,
             "is_active": True
         }
         u_res = await users_col.insert_one(u_doc)
@@ -131,8 +132,9 @@ async def seed_full_college():
         }
         t_res = await tutors_col.insert_one(t_doc)
         tutor_map[c_def["tutor_email"]] = t_res.inserted_id
+        credentials_export.append({"Role": "Tutor", "Department/Class": c_def["name"], "Name": c_def["tutor_name"], "Username/Email": c_def["tutor_email"], "Alternative ID": c_def["tutor_id_code"], "Password": t_pass})
 
-    print(f"[3/7] Created 9 dedicated tutors (1 per class). Main tutor: tutor123@gmail.com / tutor123", flush=True)
+    print(f"[3/7] Created 9 dedicated tutors with unique passwords (1 per class).", flush=True)
 
     # 5. Classes
     classes_col = get_collection("classes")
@@ -210,19 +212,22 @@ async def seed_full_college():
             if c_name == "1st B.Sc AI & ML" and s_idx == 1:
                 st_name = "K. Arun Kumar"
                 st_email = "student123@gmail.com"
-                st_pass_hash = hash_student
+                st_pass = "student123"
                 pr_name = "Mr. Ramesh Kumar"
                 pr_email = "father133@gmail.com"
-                pr_pass_hash = hash_mother
+                pr_pass = "mother123"
                 is_shortage = True
             else:
                 clean_name = st_raw_name.split()[0].lower()
                 st_email = f"{clean_name}.{reg_no.lower()}@college.edu"
-                st_pass_hash = hash_student
+                st_pass = f"Pass@{reg_no}"
                 clean_pr_name = pr_raw_name.split()[0].lower()
                 pr_email = f"{clean_pr_name}.{reg_no.lower()}@gmail.com"
-                pr_pass_hash = hash_parent
+                pr_pass = f"Parent@{reg_no}"
                 is_shortage = (s_idx in [3, 7, 13, 21, 27])
+
+            st_pass_hash = get_password_hash(st_pass)
+            pr_pass_hash = get_password_hash(pr_pass)
 
             # Student user
             st_u_doc = {
@@ -289,7 +294,10 @@ async def seed_full_college():
             if is_shortage:
                 all_shortage_student_ids.append(student_id)
 
-    print(f"[5/7] Seeded 270 students across 9 classes (30 per class). Shortage targets: {len(all_shortage_student_ids)}", flush=True)
+            credentials_export.append({"Role": "Student", "Department/Class": c_name, "Name": st_name, "Username/Email": st_email, "Alternative ID": reg_no, "Password": st_pass})
+            credentials_export.append({"Role": "Parent", "Department/Class": f"{c_name} (Ward: {reg_no})", "Name": pr_name, "Username/Email": pr_email, "Alternative ID": f"Parent-{reg_no}", "Password": pr_pass})
+
+    print(f"[5/7] Seeded 270 students with unique passwords across 9 classes. Shortage targets: {len(all_shortage_student_ids)}", flush=True)
 
     # 8. Real Attendance Sessions
     print("[6/7] Generating real lecture attendance records across all subjects...", flush=True)
@@ -313,10 +321,8 @@ async def seed_full_college():
                 is_shortage = student.get("_is_shortage_target", False)
 
                 if is_shortage:
-                    # 8 Present out of 15 (53.33% < 65%)
                     status = "PRESENT" if session_num in [0, 2, 4, 6, 8, 10, 12, 14] else "ABSENT"
                 else:
-                    # 13 or 14 Present out of 15 (86.67% - 93.33%)
                     status = "PRESENT" if session_num not in [5, 11] else "ABSENT"
 
                 att_doc = {
@@ -341,7 +347,7 @@ async def seed_full_college():
     print(f" -> Inserted {len(attendance_records)} total attendance session records.", flush=True)
 
     # 9. Trigger Fine Engine for Shortage Students
-    print("[7/7] Evaluating risk and generating fines + GPay UPI payment notices...", flush=True)
+    print("[7/7] Evaluating risk and generating fines + Paytm UPI payment notices...", flush=True)
     fine_count = 0
     all_students = await students_col.find({})
     for s in all_students:
@@ -349,13 +355,25 @@ async def seed_full_college():
         if fine_res:
             fine_count += 1
 
+    # Save credentials CSV and Markdown
+    csv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "credentials_master_list.csv")
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["Role", "Department/Class", "Name", "Username/Email", "Alternative ID", "Password"])
+        writer.writeheader()
+        writer.writerows(credentials_export)
+
+    md_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "CREDENTIALS_MASTER_LIST.md")
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("# 🎓 Smart Attendance & Student Risk Management System\n\n")
+        f.write("## 🔑 Master Credentials Directory (All 9 Tutors, 270 Students, 270 Parents)\n\n")
+        f.write("| Role | Department / Class | Name | Login Email / Identifier | Reg / Emp ID | Unique Password |\n")
+        f.write("| :--- | :--- | :--- | :--- | :--- | :--- |\n")
+        for item in credentials_export:
+            f.write(f"| **{item['Role']}** | {item['Department/Class']} | {item['Name']} | `{item['Username/Email']}` | `{item['Alternative ID']}` | `{item['Password']}` |\n")
+
     print("========================================================================", flush=True)
-    print("SUCCESS: 30 Students per Class & 9 Dedicated Tutors Database Initialized!", flush=True)
-    print(f" - 9 Classes, 27 Subjects, 9 Dedicated Faculty Tutors (1 per class)", flush=True)
-    print(f" - 270 Authentic Students (Boys & Girls) + 270 Linked Parents", flush=True)
-    print(f" - {len(attendance_records)} Verified Attendance Records", flush=True)
-    print(f" - {fine_count} Attendance Shortage Fines (<65%) generated with 48h deadline", flush=True)
-    print(" - GPay / PhonePe / UPI Scanner details dispatched to both Student & Parent Gmails", flush=True)
+    print("SUCCESS: 9 Tutors, 270 Students, 270 Parents initialized with UNIQUE Passwords!", flush=True)
+    print(f" - Credentials exported to {csv_path} and CREDENTIALS_MASTER_LIST.md", flush=True)
     print("========================================================================", flush=True)
 
 if __name__ == "__main__":
