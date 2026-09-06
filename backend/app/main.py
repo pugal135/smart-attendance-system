@@ -1,5 +1,7 @@
 import asyncio
 import os
+import subprocess
+import sys
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -39,27 +41,20 @@ async def lifespan(app: FastAPI):
     
     # Initialize full college database if tutors/classes are not seeded yet
     tutor_count = await tutors_col.count_documents({})
-    seed_task = None
+    seed_process = None
     if tutor_count < 9:
-        print("[AUTO-INIT] Starting background seed (9 classes, 9 tutors, 270 students, parents & fines)...")
-
-        async def seed_database():
-            try:
-                import sys
-                sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-                from seed_full_college_data import seed_full_college
-                await seed_full_college()
-                print("[AUTO-INIT] Background seeding completed.")
-            except Exception as e:
-                print(f"[AUTO-INIT] Warning during auto-seeding: {e}")
-
-        seed_task = asyncio.create_task(seed_database())
+        backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        print("[AUTO-INIT] Starting seed process (9 classes, 9 tutors, 270 students, parents & fines)...")
+        seed_process = subprocess.Popen(
+            [sys.executable, os.path.join(backend_dir, "seed_full_college_data.py")],
+            cwd=backend_dir,
+        )
     else:
         print(f"[INIT] Database active with {tutor_count} tutors.")
 
     yield
-    if seed_task:
-        await seed_task
+    if seed_process and seed_process.poll() is None:
+        seed_process.terminate()
     print("[SHUTDOWN] Application shutting down.")
 
 app = FastAPI(
