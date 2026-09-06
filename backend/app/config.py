@@ -13,8 +13,8 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days
     
     # MongoDB
-    MONGODB_URL: str = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
-    DATABASE_NAME: str = os.getenv("DATABASE_NAME", "smart_attendance_db")
+    MONGODB_URL: str = os.getenv("MONGODB_URL") or os.getenv("MONGO_URI", "mongodb://localhost:27017")
+    DATABASE_NAME: str = os.getenv("DATABASE_NAME") or os.getenv("MONGO_DB_NAME", "smart_attendance")
     
     # SMTP / Email
     SMTP_HOST: Optional[str] = os.getenv("SMTP_HOST", "")
