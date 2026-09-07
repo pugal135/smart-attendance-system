@@ -270,6 +270,7 @@ async def seed_full_college():
                 "user_id": st_user_id,
                 "name": st_name,
                 "register_number": reg_no,
+                "roll_number": reg_no,
                 "roll_no": roll_no,
                 "email": st_email,
                 "phone": st_u_doc["phone"],

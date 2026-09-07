@@ -1,0 +1,556 @@
+# 🎓 Smart Attendance & Student Risk Management System
+
+## 🔑 Master Credentials Directory (All 9 Tutors, 270 Students, 270 Parents)
+
+| Role | Department / Class | Name | Login Email / Identifier | Reg / Emp ID | Unique Password |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Admin** | Administration | Dr. K. S. Ramanathan | `admin@college.edu` | `ADMIN-01` | `admin123` |
+| **Tutor** | 1st B.Sc AI & ML | Prof. S. Rajesh | `tutor123@gmail.com` | `TUT_AIML_01` | `tutor123` |
+| **Tutor** | 2nd B.Sc AI & ML | Dr. A. Meenakshi | `meenakshi.faculty@college.edu` | `TUT_AIML_02` | `Meenakshi@AIML2` |
+| **Tutor** | 3rd B.Sc AI & ML | Prof. M. Saravanan | `saravanan.faculty@college.edu` | `TUT_AIML_03` | `Saravanan@AIML3` |
+| **Tutor** | 1st BCA | Dr. M. Deepa | `deepa.faculty@college.edu` | `TUT_BCA_01` | `Deepa@BCA1` |
+| **Tutor** | 2nd BCA | Prof. P. Suresh | `suresh.faculty@college.edu` | `TUT_BCA_02` | `Suresh@BCA2` |
+| **Tutor** | 3rd BCA | Dr. K. Geetha | `geetha.faculty@college.edu` | `TUT_BCA_03` | `Geetha@BCA3` |
+| **Tutor** | 1st B.Sc Computer Science | Prof. V. Karthik | `karthik.faculty@college.edu` | `TUT_CS_01` | `Karthik@CS1` |
+| **Tutor** | 2nd B.Sc Computer Science | Prof. R. Vijay | `vijay.faculty@college.edu` | `TUT_CS_02` | `Vijay@CS2` |
+| **Tutor** | 3rd B.Sc Computer Science | Dr. S. Balamurugan | `balamurugan.faculty@college.edu` | `TUT_CS_03` | `Balamurugan@CS3` |
+| **Student** | 1st B.Sc AI & ML | K. Arun Kumar | `student123@gmail.com` | `26AIML001` | `student123` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML001) | Mr. Ramesh Kumar | `father133@gmail.com` | `Parent-26AIML001` | `mother123` |
+| **Student** | 1st B.Sc AI & ML | M. Kavitha | `kavitha.26aiml002@college.edu` | `26AIML002` | `Pass@26AIML002` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML002) | Mr. Radhakrishnan | `radhakrishnan.26aiml002@gmail.com` | `Parent-26AIML002` | `Parent@26AIML002` |
+| **Student** | 1st B.Sc AI & ML | R. Vignesh | `vignesh.26aiml003@college.edu` | `26AIML003` | `Pass@26AIML003` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML003) | Mr. Mani | `mani.26aiml003@gmail.com` | `Parent-26AIML003` | `Parent@26AIML003` |
+| **Student** | 1st B.Sc AI & ML | G. Ananya Sri | `ananya.26aiml004@college.edu` | `26AIML004` | `Pass@26AIML004` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML004) | Mr. Thangavel | `thangavel.26aiml004@gmail.com` | `Parent-26AIML004` | `Parent@26AIML004` |
+| **Student** | 1st B.Sc AI & ML | T. Dinesh Kumar | `dinesh.26aiml005@college.edu` | `26AIML005` | `Pass@26AIML005` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML005) | Mr. Ganesan | `ganesan.26aiml005@gmail.com` | `Parent-26AIML005` | `Parent@26AIML005` |
+| **Student** | 1st B.Sc AI & ML | N. Divya Bharathi | `divya.26aiml006@college.edu` | `26AIML006` | `Pass@26AIML006` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML006) | Mr. Balan | `balan.26aiml006@gmail.com` | `Parent-26AIML006` | `Parent@26AIML006` |
+| **Student** | 1st B.Sc AI & ML | B. Sanjay | `sanjay.26aiml007@college.edu` | `26AIML007` | `Pass@26AIML007` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML007) | Mr. Natarajan | `natarajan.26aiml007@gmail.com` | `Parent-26AIML007` | `Parent@26AIML007` |
+| **Student** | 1st B.Sc AI & ML | A. Keerthana | `keerthana.26aiml008@college.edu` | `26AIML008` | `Pass@26AIML008` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML008) | Mr. Velmurugan | `velmurugan.26aiml008@gmail.com` | `Parent-26AIML008` | `Parent@26AIML008` |
+| **Student** | 1st B.Sc AI & ML | V. Harish Raghav | `harish.26aiml009@college.edu` | `26AIML009` | `Pass@26AIML009` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML009) | Mr. Arumugam | `arumugam.26aiml009@gmail.com` | `Parent-26AIML009` | `Parent@26AIML009` |
+| **Student** | 1st B.Sc AI & ML | P. Deepa Lakshmi | `deepa.26aiml010@college.edu` | `26AIML010` | `Pass@26AIML010` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML010) | Mr. Krishnan | `krishnan.26aiml010@gmail.com` | `Parent-26AIML010` | `Parent@26AIML010` |
+| **Student** | 1st B.Sc AI & ML | J. Manoj Kumar | `manoj.26aiml011@college.edu` | `26AIML011` | `Pass@26AIML011` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML011) | Mr. Annamalai | `annamalai.26aiml011@gmail.com` | `Parent-26AIML011` | `Parent@26AIML011` |
+| **Student** | 1st B.Sc AI & ML | C. Swetha | `swetha.26aiml012@college.edu` | `26AIML012` | `Pass@26AIML012` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML012) | Mr. Selvam | `selvam.26aiml012@gmail.com` | `Parent-26AIML012` | `Parent@26AIML012` |
+| **Student** | 1st B.Sc AI & ML | E. Naveen Prasath | `naveen.26aiml013@college.edu` | `26AIML013` | `Pass@26AIML013` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML013) | Mr. Ramanathan | `ramanathan.26aiml013@gmail.com` | `Parent-26AIML013` | `Parent@26AIML013` |
+| **Student** | 1st B.Sc AI & ML | D. Sneha | `sneha.26aiml014@college.edu` | `26AIML014` | `Pass@26AIML014` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML014) | Mr. Muthukumar | `muthukumar.26aiml014@gmail.com` | `Parent-26AIML014` | `Parent@26AIML014` |
+| **Student** | 1st B.Sc AI & ML | L. Gokulnath | `gokulnath.26aiml015@college.edu` | `26AIML015` | `Pass@26AIML015` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML015) | Mr. Palanisamy | `palanisamy.26aiml015@gmail.com` | `Parent-26AIML015` | `Parent@26AIML015` |
+| **Student** | 1st B.Sc AI & ML | H. Pavithra | `pavithra.26aiml016@college.edu` | `26AIML016` | `Pass@26AIML016` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML016) | Mr. Chandran | `chandran.26aiml016@gmail.com` | `Parent-26AIML016` | `Parent@26AIML016` |
+| **Student** | 1st B.Sc AI & ML | Y. Karthikeyan | `karthikeyan.26aiml017@college.edu` | `26AIML017` | `Pass@26AIML017` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML017) | Mr. Jayaraman | `jayaraman.26aiml017@gmail.com` | `Parent-26AIML017` | `Parent@26AIML017` |
+| **Student** | 1st B.Sc AI & ML | K. Abinaya | `abinaya.26aiml018@college.edu` | `26AIML018` | `Pass@26AIML018` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML018) | Mr. Durairaj | `durairaj.26aiml018@gmail.com` | `Parent-26AIML018` | `Parent@26AIML018` |
+| **Student** | 1st B.Sc AI & ML | S. Vigneshwaran | `vigneshwaran.26aiml019@college.edu` | `26AIML019` | `Pass@26AIML019` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML019) | Mr. Elango | `elango.26aiml019@gmail.com` | `Parent-26AIML019` | `Parent@26AIML019` |
+| **Student** | 1st B.Sc AI & ML | M. Lavanya | `lavanya.26aiml020@college.edu` | `26AIML020` | `Pass@26AIML020` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML020) | Mr. Loganathan | `loganathan.26aiml020@gmail.com` | `Parent-26AIML020` | `Parent@26AIML020` |
+| **Student** | 1st B.Sc AI & ML | R. Ashwin Soundar | `ashwin.26aiml021@college.edu` | `26AIML021` | `Pass@26AIML021` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML021) | Mr. Soundararajan | `soundararajan.26aiml021@gmail.com` | `Parent-26AIML021` | `Parent@26AIML021` |
+| **Student** | 1st B.Sc AI & ML | G. Harini | `harini.26aiml022@college.edu` | `26AIML022` | `Pass@26AIML022` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML022) | Mr. Rajendran | `rajendran.26aiml022@gmail.com` | `Parent-26AIML022` | `Parent@26AIML022` |
+| **Student** | 1st B.Sc AI & ML | T. Siddharth | `siddharth.26aiml023@college.edu` | `26AIML023` | `Pass@26AIML023` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML023) | Mr. Kumaravel | `kumaravel.26aiml023@gmail.com` | `Parent-26AIML023` | `Parent@26AIML023` |
+| **Student** | 1st B.Sc AI & ML | N. Gayathri | `gayathri.26aiml024@college.edu` | `26AIML024` | `Pass@26AIML024` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML024) | Mr. Panneerselvam | `panneerselvam.26aiml024@gmail.com` | `Parent-26AIML024` | `Parent@26AIML024` |
+| **Student** | 1st B.Sc AI & ML | B. Ragav | `ragav.26aiml025@college.edu` | `26AIML025` | `Pass@26AIML025` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML025) | Mr. Vasudevan | `vasudevan.26aiml025@gmail.com` | `Parent-26AIML025` | `Parent@26AIML025` |
+| **Student** | 1st B.Sc AI & ML | A. Sandhya | `sandhya.26aiml026@college.edu` | `26AIML026` | `Pass@26AIML026` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML026) | Mr. Nagarajan | `nagarajan.26aiml026@gmail.com` | `Parent-26AIML026` | `Parent@26AIML026` |
+| **Student** | 1st B.Sc AI & ML | V. Mukesh | `mukesh.26aiml027@college.edu` | `26AIML027` | `Pass@26AIML027` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML027) | Mr. Thirumalai | `thirumalai.26aiml027@gmail.com` | `Parent-26AIML027` | `Parent@26AIML027` |
+| **Student** | 1st B.Sc AI & ML | P. Yamuna | `yamuna.26aiml028@college.edu` | `26AIML028` | `Pass@26AIML028` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML028) | Mr. Mohan | `mohan.26aiml028@gmail.com` | `Parent-26AIML028` | `Parent@26AIML028` |
+| **Student** | 1st B.Sc AI & ML | J. Aravind | `aravind.26aiml029@college.edu` | `26AIML029` | `Pass@26AIML029` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML029) | Mr. Govindaraj | `govindaraj.26aiml029@gmail.com` | `Parent-26AIML029` | `Parent@26AIML029` |
+| **Student** | 1st B.Sc AI & ML | C. Janani | `janani.26aiml030@college.edu` | `26AIML030` | `Pass@26AIML030` |
+| **Parent** | 1st B.Sc AI & ML (Ward: 26AIML030) | Mr. Jayakumar | `jayakumar.26aiml030@gmail.com` | `Parent-26AIML030` | `Parent@26AIML030` |
+| **Student** | 2nd B.Sc AI & ML | M. Sanjay | `sanjay.25aiml001@college.edu` | `25AIML001` | `Pass@25AIML001` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML001) | Mr. Natarajan | `natarajan.25aiml001@gmail.com` | `Parent-25AIML001` | `Parent@25AIML001` |
+| **Student** | 2nd B.Sc AI & ML | R. Keerthana | `keerthana.25aiml002@college.edu` | `25AIML002` | `Pass@25AIML002` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML002) | Mr. Velmurugan | `velmurugan.25aiml002@gmail.com` | `Parent-25AIML002` | `Parent@25AIML002` |
+| **Student** | 2nd B.Sc AI & ML | G. Harish Raghav | `harish.25aiml003@college.edu` | `25AIML003` | `Pass@25AIML003` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML003) | Mr. Arumugam | `arumugam.25aiml003@gmail.com` | `Parent-25AIML003` | `Parent@25AIML003` |
+| **Student** | 2nd B.Sc AI & ML | T. Deepa Lakshmi | `deepa.25aiml004@college.edu` | `25AIML004` | `Pass@25AIML004` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML004) | Mr. Krishnan | `krishnan.25aiml004@gmail.com` | `Parent-25AIML004` | `Parent@25AIML004` |
+| **Student** | 2nd B.Sc AI & ML | N. Manoj Kumar | `manoj.25aiml005@college.edu` | `25AIML005` | `Pass@25AIML005` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML005) | Mr. Annamalai | `annamalai.25aiml005@gmail.com` | `Parent-25AIML005` | `Parent@25AIML005` |
+| **Student** | 2nd B.Sc AI & ML | B. Swetha | `swetha.25aiml006@college.edu` | `25AIML006` | `Pass@25AIML006` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML006) | Mr. Selvam | `selvam.25aiml006@gmail.com` | `Parent-25AIML006` | `Parent@25AIML006` |
+| **Student** | 2nd B.Sc AI & ML | A. Naveen Prasath | `naveen.25aiml007@college.edu` | `25AIML007` | `Pass@25AIML007` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML007) | Mr. Ramanathan | `ramanathan.25aiml007@gmail.com` | `Parent-25AIML007` | `Parent@25AIML007` |
+| **Student** | 2nd B.Sc AI & ML | V. Sneha | `sneha.25aiml008@college.edu` | `25AIML008` | `Pass@25AIML008` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML008) | Mr. Muthukumar | `muthukumar.25aiml008@gmail.com` | `Parent-25AIML008` | `Parent@25AIML008` |
+| **Student** | 2nd B.Sc AI & ML | P. Gokulnath | `gokulnath.25aiml009@college.edu` | `25AIML009` | `Pass@25AIML009` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML009) | Mr. Palanisamy | `palanisamy.25aiml009@gmail.com` | `Parent-25AIML009` | `Parent@25AIML009` |
+| **Student** | 2nd B.Sc AI & ML | J. Pavithra | `pavithra.25aiml010@college.edu` | `25AIML010` | `Pass@25AIML010` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML010) | Mr. Chandran | `chandran.25aiml010@gmail.com` | `Parent-25AIML010` | `Parent@25AIML010` |
+| **Student** | 2nd B.Sc AI & ML | C. Karthikeyan | `karthikeyan.25aiml011@college.edu` | `25AIML011` | `Pass@25AIML011` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML011) | Mr. Jayaraman | `jayaraman.25aiml011@gmail.com` | `Parent-25AIML011` | `Parent@25AIML011` |
+| **Student** | 2nd B.Sc AI & ML | E. Abinaya | `abinaya.25aiml012@college.edu` | `25AIML012` | `Pass@25AIML012` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML012) | Mr. Durairaj | `durairaj.25aiml012@gmail.com` | `Parent-25AIML012` | `Parent@25AIML012` |
+| **Student** | 2nd B.Sc AI & ML | D. Vigneshwaran | `vigneshwaran.25aiml013@college.edu` | `25AIML013` | `Pass@25AIML013` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML013) | Mr. Elango | `elango.25aiml013@gmail.com` | `Parent-25AIML013` | `Parent@25AIML013` |
+| **Student** | 2nd B.Sc AI & ML | L. Lavanya | `lavanya.25aiml014@college.edu` | `25AIML014` | `Pass@25AIML014` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML014) | Mr. Loganathan | `loganathan.25aiml014@gmail.com` | `Parent-25AIML014` | `Parent@25AIML014` |
+| **Student** | 2nd B.Sc AI & ML | H. Ashwin Soundar | `ashwin.25aiml015@college.edu` | `25AIML015` | `Pass@25AIML015` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML015) | Mr. Soundararajan | `soundararajan.25aiml015@gmail.com` | `Parent-25AIML015` | `Parent@25AIML015` |
+| **Student** | 2nd B.Sc AI & ML | Y. Harini | `harini.25aiml016@college.edu` | `25AIML016` | `Pass@25AIML016` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML016) | Mr. Rajendran | `rajendran.25aiml016@gmail.com` | `Parent-25AIML016` | `Parent@25AIML016` |
+| **Student** | 2nd B.Sc AI & ML | K. Siddharth | `siddharth.25aiml017@college.edu` | `25AIML017` | `Pass@25AIML017` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML017) | Mr. Kumaravel | `kumaravel.25aiml017@gmail.com` | `Parent-25AIML017` | `Parent@25AIML017` |
+| **Student** | 2nd B.Sc AI & ML | S. Gayathri | `gayathri.25aiml018@college.edu` | `25AIML018` | `Pass@25AIML018` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML018) | Mr. Panneerselvam | `panneerselvam.25aiml018@gmail.com` | `Parent-25AIML018` | `Parent@25AIML018` |
+| **Student** | 2nd B.Sc AI & ML | M. Ragav | `ragav.25aiml019@college.edu` | `25AIML019` | `Pass@25AIML019` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML019) | Mr. Vasudevan | `vasudevan.25aiml019@gmail.com` | `Parent-25AIML019` | `Parent@25AIML019` |
+| **Student** | 2nd B.Sc AI & ML | R. Sandhya | `sandhya.25aiml020@college.edu` | `25AIML020` | `Pass@25AIML020` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML020) | Mr. Nagarajan | `nagarajan.25aiml020@gmail.com` | `Parent-25AIML020` | `Parent@25AIML020` |
+| **Student** | 2nd B.Sc AI & ML | G. Mukesh | `mukesh.25aiml021@college.edu` | `25AIML021` | `Pass@25AIML021` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML021) | Mr. Thirumalai | `thirumalai.25aiml021@gmail.com` | `Parent-25AIML021` | `Parent@25AIML021` |
+| **Student** | 2nd B.Sc AI & ML | T. Yamuna | `yamuna.25aiml022@college.edu` | `25AIML022` | `Pass@25AIML022` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML022) | Mr. Mohan | `mohan.25aiml022@gmail.com` | `Parent-25AIML022` | `Parent@25AIML022` |
+| **Student** | 2nd B.Sc AI & ML | N. Aravind | `aravind.25aiml023@college.edu` | `25AIML023` | `Pass@25AIML023` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML023) | Mr. Govindaraj | `govindaraj.25aiml023@gmail.com` | `Parent-25AIML023` | `Parent@25AIML023` |
+| **Student** | 2nd B.Sc AI & ML | B. Janani | `janani.25aiml024@college.edu` | `25AIML024` | `Pass@25AIML024` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML024) | Mr. Jayakumar | `jayakumar.25aiml024@gmail.com` | `Parent-25AIML024` | `Parent@25AIML024` |
+| **Student** | 2nd B.Sc AI & ML | A. Praveen | `praveen.25aiml025@college.edu` | `25AIML025` | `Pass@25AIML025` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML025) | Mr. Palanivel | `palanivel.25aiml025@gmail.com` | `Parent-25AIML025` | `Parent@25AIML025` |
+| **Student** | 2nd B.Sc AI & ML | V. Ramya | `ramya.25aiml026@college.edu` | `25AIML026` | `Pass@25AIML026` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML026) | Mr. Rajendran | `rajendran.25aiml026@gmail.com` | `Parent-25AIML026` | `Parent@25AIML026` |
+| **Student** | 2nd B.Sc AI & ML | P. Chandru | `chandru.25aiml027@college.edu` | `25AIML027` | `Pass@25AIML027` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML027) | Mr. Chandrasekhar | `chandrasekhar.25aiml027@gmail.com` | `Parent-25AIML027` | `Parent@25AIML027` |
+| **Student** | 2nd B.Sc AI & ML | J. Kaviya | `kaviya.25aiml028@college.edu` | `25AIML028` | `Pass@25AIML028` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML028) | Mr. Krishnan | `krishnan.25aiml028@gmail.com` | `Parent-25AIML028` | `Parent@25AIML028` |
+| **Student** | 2nd B.Sc AI & ML | C. Deepak | `deepak.25aiml029@college.edu` | `25AIML029` | `Pass@25AIML029` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML029) | Mr. Devarajan | `devarajan.25aiml029@gmail.com` | `Parent-25AIML029` | `Parent@25AIML029` |
+| **Student** | 2nd B.Sc AI & ML | E. Vaishnavi | `vaishnavi.25aiml030@college.edu` | `25AIML030` | `Pass@25AIML030` |
+| **Parent** | 2nd B.Sc AI & ML (Ward: 25AIML030) | Mr. Venkatesan | `venkatesan.25aiml030@gmail.com` | `Parent-25AIML030` | `Parent@25AIML030` |
+| **Student** | 3rd B.Sc AI & ML | R. Naveen Prasath | `naveen.24aiml001@college.edu` | `24AIML001` | `Pass@24AIML001` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML001) | Mr. Ramanathan | `ramanathan.24aiml001@gmail.com` | `Parent-24AIML001` | `Parent@24AIML001` |
+| **Student** | 3rd B.Sc AI & ML | G. Sneha | `sneha.24aiml002@college.edu` | `24AIML002` | `Pass@24AIML002` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML002) | Mr. Muthukumar | `muthukumar.24aiml002@gmail.com` | `Parent-24AIML002` | `Parent@24AIML002` |
+| **Student** | 3rd B.Sc AI & ML | T. Gokulnath | `gokulnath.24aiml003@college.edu` | `24AIML003` | `Pass@24AIML003` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML003) | Mr. Palanisamy | `palanisamy.24aiml003@gmail.com` | `Parent-24AIML003` | `Parent@24AIML003` |
+| **Student** | 3rd B.Sc AI & ML | N. Pavithra | `pavithra.24aiml004@college.edu` | `24AIML004` | `Pass@24AIML004` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML004) | Mr. Chandran | `chandran.24aiml004@gmail.com` | `Parent-24AIML004` | `Parent@24AIML004` |
+| **Student** | 3rd B.Sc AI & ML | B. Karthikeyan | `karthikeyan.24aiml005@college.edu` | `24AIML005` | `Pass@24AIML005` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML005) | Mr. Jayaraman | `jayaraman.24aiml005@gmail.com` | `Parent-24AIML005` | `Parent@24AIML005` |
+| **Student** | 3rd B.Sc AI & ML | A. Abinaya | `abinaya.24aiml006@college.edu` | `24AIML006` | `Pass@24AIML006` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML006) | Mr. Durairaj | `durairaj.24aiml006@gmail.com` | `Parent-24AIML006` | `Parent@24AIML006` |
+| **Student** | 3rd B.Sc AI & ML | V. Vigneshwaran | `vigneshwaran.24aiml007@college.edu` | `24AIML007` | `Pass@24AIML007` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML007) | Mr. Elango | `elango.24aiml007@gmail.com` | `Parent-24AIML007` | `Parent@24AIML007` |
+| **Student** | 3rd B.Sc AI & ML | P. Lavanya | `lavanya.24aiml008@college.edu` | `24AIML008` | `Pass@24AIML008` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML008) | Mr. Loganathan | `loganathan.24aiml008@gmail.com` | `Parent-24AIML008` | `Parent@24AIML008` |
+| **Student** | 3rd B.Sc AI & ML | J. Ashwin Soundar | `ashwin.24aiml009@college.edu` | `24AIML009` | `Pass@24AIML009` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML009) | Mr. Soundararajan | `soundararajan.24aiml009@gmail.com` | `Parent-24AIML009` | `Parent@24AIML009` |
+| **Student** | 3rd B.Sc AI & ML | C. Harini | `harini.24aiml010@college.edu` | `24AIML010` | `Pass@24AIML010` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML010) | Mr. Rajendran | `rajendran.24aiml010@gmail.com` | `Parent-24AIML010` | `Parent@24AIML010` |
+| **Student** | 3rd B.Sc AI & ML | E. Siddharth | `siddharth.24aiml011@college.edu` | `24AIML011` | `Pass@24AIML011` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML011) | Mr. Kumaravel | `kumaravel.24aiml011@gmail.com` | `Parent-24AIML011` | `Parent@24AIML011` |
+| **Student** | 3rd B.Sc AI & ML | D. Gayathri | `gayathri.24aiml012@college.edu` | `24AIML012` | `Pass@24AIML012` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML012) | Mr. Panneerselvam | `panneerselvam.24aiml012@gmail.com` | `Parent-24AIML012` | `Parent@24AIML012` |
+| **Student** | 3rd B.Sc AI & ML | L. Ragav | `ragav.24aiml013@college.edu` | `24AIML013` | `Pass@24AIML013` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML013) | Mr. Vasudevan | `vasudevan.24aiml013@gmail.com` | `Parent-24AIML013` | `Parent@24AIML013` |
+| **Student** | 3rd B.Sc AI & ML | H. Sandhya | `sandhya.24aiml014@college.edu` | `24AIML014` | `Pass@24AIML014` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML014) | Mr. Nagarajan | `nagarajan.24aiml014@gmail.com` | `Parent-24AIML014` | `Parent@24AIML014` |
+| **Student** | 3rd B.Sc AI & ML | Y. Mukesh | `mukesh.24aiml015@college.edu` | `24AIML015` | `Pass@24AIML015` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML015) | Mr. Thirumalai | `thirumalai.24aiml015@gmail.com` | `Parent-24AIML015` | `Parent@24AIML015` |
+| **Student** | 3rd B.Sc AI & ML | K. Yamuna | `yamuna.24aiml016@college.edu` | `24AIML016` | `Pass@24AIML016` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML016) | Mr. Mohan | `mohan.24aiml016@gmail.com` | `Parent-24AIML016` | `Parent@24AIML016` |
+| **Student** | 3rd B.Sc AI & ML | S. Aravind | `aravind.24aiml017@college.edu` | `24AIML017` | `Pass@24AIML017` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML017) | Mr. Govindaraj | `govindaraj.24aiml017@gmail.com` | `Parent-24AIML017` | `Parent@24AIML017` |
+| **Student** | 3rd B.Sc AI & ML | M. Janani | `janani.24aiml018@college.edu` | `24AIML018` | `Pass@24AIML018` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML018) | Mr. Jayakumar | `jayakumar.24aiml018@gmail.com` | `Parent-24AIML018` | `Parent@24AIML018` |
+| **Student** | 3rd B.Sc AI & ML | R. Praveen | `praveen.24aiml019@college.edu` | `24AIML019` | `Pass@24AIML019` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML019) | Mr. Palanivel | `palanivel.24aiml019@gmail.com` | `Parent-24AIML019` | `Parent@24AIML019` |
+| **Student** | 3rd B.Sc AI & ML | G. Ramya | `ramya.24aiml020@college.edu` | `24AIML020` | `Pass@24AIML020` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML020) | Mr. Rajendran | `rajendran.24aiml020@gmail.com` | `Parent-24AIML020` | `Parent@24AIML020` |
+| **Student** | 3rd B.Sc AI & ML | T. Chandru | `chandru.24aiml021@college.edu` | `24AIML021` | `Pass@24AIML021` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML021) | Mr. Chandrasekhar | `chandrasekhar.24aiml021@gmail.com` | `Parent-24AIML021` | `Parent@24AIML021` |
+| **Student** | 3rd B.Sc AI & ML | N. Kaviya | `kaviya.24aiml022@college.edu` | `24AIML022` | `Pass@24AIML022` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML022) | Mr. Krishnan | `krishnan.24aiml022@gmail.com` | `Parent-24AIML022` | `Parent@24AIML022` |
+| **Student** | 3rd B.Sc AI & ML | B. Deepak | `deepak.24aiml023@college.edu` | `24AIML023` | `Pass@24AIML023` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML023) | Mr. Devarajan | `devarajan.24aiml023@gmail.com` | `Parent-24AIML023` | `Parent@24AIML023` |
+| **Student** | 3rd B.Sc AI & ML | A. Vaishnavi | `vaishnavi.24aiml024@college.edu` | `24AIML024` | `Pass@24AIML024` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML024) | Mr. Venkatesan | `venkatesan.24aiml024@gmail.com` | `Parent-24AIML024` | `Parent@24AIML024` |
+| **Student** | 3rd B.Sc AI & ML | V. Balaji | `balaji.24aiml025@college.edu` | `24AIML025` | `Pass@24AIML025` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML025) | Mr. Baskar | `baskar.24aiml025@gmail.com` | `Parent-24AIML025` | `Parent@24AIML025` |
+| **Student** | 3rd B.Sc AI & ML | P. Menaka | `menaka.24aiml026@college.edu` | `24AIML026` | `Pass@24AIML026` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML026) | Mr. Murugesan | `murugesan.24aiml026@gmail.com` | `Parent-24AIML026` | `Parent@24AIML026` |
+| **Student** | 3rd B.Sc AI & ML | J. Rajesh | `rajesh.24aiml027@college.edu` | `24AIML027` | `Pass@24AIML027` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML027) | Mr. Ramasamy | `ramasamy.24aiml027@gmail.com` | `Parent-24AIML027` | `Parent@24AIML027` |
+| **Student** | 3rd B.Sc AI & ML | C. Roshini | `roshini.24aiml028@college.edu` | `24AIML028` | `Pass@24AIML028` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML028) | Mr. Ranganathan | `ranganathan.24aiml028@gmail.com` | `Parent-24AIML028` | `Parent@24AIML028` |
+| **Student** | 3rd B.Sc AI & ML | E. Suresh | `suresh.24aiml029@college.edu` | `24AIML029` | `Pass@24AIML029` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML029) | Mr. Subbarayan | `subbarayan.24aiml029@gmail.com` | `Parent-24AIML029` | `Parent@24AIML029` |
+| **Student** | 3rd B.Sc AI & ML | D. Bhuvaneshwari | `bhuvaneshwari.24aiml030@college.edu` | `24AIML030` | `Pass@24AIML030` |
+| **Parent** | 3rd B.Sc AI & ML (Ward: 24AIML030) | Mr. Boopalan | `boopalan.24aiml030@gmail.com` | `Parent-24AIML030` | `Parent@24AIML030` |
+| **Student** | 1st BCA | G. Vigneshwaran | `vigneshwaran.26bca001@college.edu` | `26BCA001` | `Pass@26BCA001` |
+| **Parent** | 1st BCA (Ward: 26BCA001) | Mr. Elango | `elango.26bca001@gmail.com` | `Parent-26BCA001` | `Parent@26BCA001` |
+| **Student** | 1st BCA | T. Lavanya | `lavanya.26bca002@college.edu` | `26BCA002` | `Pass@26BCA002` |
+| **Parent** | 1st BCA (Ward: 26BCA002) | Mr. Loganathan | `loganathan.26bca002@gmail.com` | `Parent-26BCA002` | `Parent@26BCA002` |
+| **Student** | 1st BCA | N. Ashwin Soundar | `ashwin.26bca003@college.edu` | `26BCA003` | `Pass@26BCA003` |
+| **Parent** | 1st BCA (Ward: 26BCA003) | Mr. Soundararajan | `soundararajan.26bca003@gmail.com` | `Parent-26BCA003` | `Parent@26BCA003` |
+| **Student** | 1st BCA | B. Harini | `harini.26bca004@college.edu` | `26BCA004` | `Pass@26BCA004` |
+| **Parent** | 1st BCA (Ward: 26BCA004) | Mr. Rajendran | `rajendran.26bca004@gmail.com` | `Parent-26BCA004` | `Parent@26BCA004` |
+| **Student** | 1st BCA | A. Siddharth | `siddharth.26bca005@college.edu` | `26BCA005` | `Pass@26BCA005` |
+| **Parent** | 1st BCA (Ward: 26BCA005) | Mr. Kumaravel | `kumaravel.26bca005@gmail.com` | `Parent-26BCA005` | `Parent@26BCA005` |
+| **Student** | 1st BCA | V. Gayathri | `gayathri.26bca006@college.edu` | `26BCA006` | `Pass@26BCA006` |
+| **Parent** | 1st BCA (Ward: 26BCA006) | Mr. Panneerselvam | `panneerselvam.26bca006@gmail.com` | `Parent-26BCA006` | `Parent@26BCA006` |
+| **Student** | 1st BCA | P. Ragav | `ragav.26bca007@college.edu` | `26BCA007` | `Pass@26BCA007` |
+| **Parent** | 1st BCA (Ward: 26BCA007) | Mr. Vasudevan | `vasudevan.26bca007@gmail.com` | `Parent-26BCA007` | `Parent@26BCA007` |
+| **Student** | 1st BCA | J. Sandhya | `sandhya.26bca008@college.edu` | `26BCA008` | `Pass@26BCA008` |
+| **Parent** | 1st BCA (Ward: 26BCA008) | Mr. Nagarajan | `nagarajan.26bca008@gmail.com` | `Parent-26BCA008` | `Parent@26BCA008` |
+| **Student** | 1st BCA | C. Mukesh | `mukesh.26bca009@college.edu` | `26BCA009` | `Pass@26BCA009` |
+| **Parent** | 1st BCA (Ward: 26BCA009) | Mr. Thirumalai | `thirumalai.26bca009@gmail.com` | `Parent-26BCA009` | `Parent@26BCA009` |
+| **Student** | 1st BCA | E. Yamuna | `yamuna.26bca010@college.edu` | `26BCA010` | `Pass@26BCA010` |
+| **Parent** | 1st BCA (Ward: 26BCA010) | Mr. Mohan | `mohan.26bca010@gmail.com` | `Parent-26BCA010` | `Parent@26BCA010` |
+| **Student** | 1st BCA | D. Aravind | `aravind.26bca011@college.edu` | `26BCA011` | `Pass@26BCA011` |
+| **Parent** | 1st BCA (Ward: 26BCA011) | Mr. Govindaraj | `govindaraj.26bca011@gmail.com` | `Parent-26BCA011` | `Parent@26BCA011` |
+| **Student** | 1st BCA | L. Janani | `janani.26bca012@college.edu` | `26BCA012` | `Pass@26BCA012` |
+| **Parent** | 1st BCA (Ward: 26BCA012) | Mr. Jayakumar | `jayakumar.26bca012@gmail.com` | `Parent-26BCA012` | `Parent@26BCA012` |
+| **Student** | 1st BCA | H. Praveen | `praveen.26bca013@college.edu` | `26BCA013` | `Pass@26BCA013` |
+| **Parent** | 1st BCA (Ward: 26BCA013) | Mr. Palanivel | `palanivel.26bca013@gmail.com` | `Parent-26BCA013` | `Parent@26BCA013` |
+| **Student** | 1st BCA | Y. Ramya | `ramya.26bca014@college.edu` | `26BCA014` | `Pass@26BCA014` |
+| **Parent** | 1st BCA (Ward: 26BCA014) | Mr. Rajendran | `rajendran.26bca014@gmail.com` | `Parent-26BCA014` | `Parent@26BCA014` |
+| **Student** | 1st BCA | K. Chandru | `chandru.26bca015@college.edu` | `26BCA015` | `Pass@26BCA015` |
+| **Parent** | 1st BCA (Ward: 26BCA015) | Mr. Chandrasekhar | `chandrasekhar.26bca015@gmail.com` | `Parent-26BCA015` | `Parent@26BCA015` |
+| **Student** | 1st BCA | S. Kaviya | `kaviya.26bca016@college.edu` | `26BCA016` | `Pass@26BCA016` |
+| **Parent** | 1st BCA (Ward: 26BCA016) | Mr. Krishnan | `krishnan.26bca016@gmail.com` | `Parent-26BCA016` | `Parent@26BCA016` |
+| **Student** | 1st BCA | M. Deepak | `deepak.26bca017@college.edu` | `26BCA017` | `Pass@26BCA017` |
+| **Parent** | 1st BCA (Ward: 26BCA017) | Mr. Devarajan | `devarajan.26bca017@gmail.com` | `Parent-26BCA017` | `Parent@26BCA017` |
+| **Student** | 1st BCA | R. Vaishnavi | `vaishnavi.26bca018@college.edu` | `26BCA018` | `Pass@26BCA018` |
+| **Parent** | 1st BCA (Ward: 26BCA018) | Mr. Venkatesan | `venkatesan.26bca018@gmail.com` | `Parent-26BCA018` | `Parent@26BCA018` |
+| **Student** | 1st BCA | G. Balaji | `balaji.26bca019@college.edu` | `26BCA019` | `Pass@26BCA019` |
+| **Parent** | 1st BCA (Ward: 26BCA019) | Mr. Baskar | `baskar.26bca019@gmail.com` | `Parent-26BCA019` | `Parent@26BCA019` |
+| **Student** | 1st BCA | T. Menaka | `menaka.26bca020@college.edu` | `26BCA020` | `Pass@26BCA020` |
+| **Parent** | 1st BCA (Ward: 26BCA020) | Mr. Murugesan | `murugesan.26bca020@gmail.com` | `Parent-26BCA020` | `Parent@26BCA020` |
+| **Student** | 1st BCA | N. Rajesh | `rajesh.26bca021@college.edu` | `26BCA021` | `Pass@26BCA021` |
+| **Parent** | 1st BCA (Ward: 26BCA021) | Mr. Ramasamy | `ramasamy.26bca021@gmail.com` | `Parent-26BCA021` | `Parent@26BCA021` |
+| **Student** | 1st BCA | B. Roshini | `roshini.26bca022@college.edu` | `26BCA022` | `Pass@26BCA022` |
+| **Parent** | 1st BCA (Ward: 26BCA022) | Mr. Ranganathan | `ranganathan.26bca022@gmail.com` | `Parent-26BCA022` | `Parent@26BCA022` |
+| **Student** | 1st BCA | A. Suresh | `suresh.26bca023@college.edu` | `26BCA023` | `Pass@26BCA023` |
+| **Parent** | 1st BCA (Ward: 26BCA023) | Mr. Subbarayan | `subbarayan.26bca023@gmail.com` | `Parent-26BCA023` | `Parent@26BCA023` |
+| **Student** | 1st BCA | V. Bhuvaneshwari | `bhuvaneshwari.26bca024@college.edu` | `26BCA024` | `Pass@26BCA024` |
+| **Parent** | 1st BCA (Ward: 26BCA024) | Mr. Boopalan | `boopalan.26bca024@gmail.com` | `Parent-26BCA024` | `Parent@26BCA024` |
+| **Student** | 1st BCA | P. Kishore | `kishore.26bca025@college.edu` | `26BCA025` | `Pass@26BCA025` |
+| **Parent** | 1st BCA (Ward: 26BCA025) | Mr. Kandasamy | `kandasamy.26bca025@gmail.com` | `Parent-26BCA025` | `Parent@26BCA025` |
+| **Student** | 1st BCA | J. Preethi | `preethi.26bca026@college.edu` | `26BCA026` | `Pass@26BCA026` |
+| **Parent** | 1st BCA (Ward: 26BCA026) | Mr. Pandian | `pandian.26bca026@gmail.com` | `Parent-26BCA026` | `Parent@26BCA026` |
+| **Student** | 1st BCA | C. Ajay | `ajay.26bca027@college.edu` | `26BCA027` | `Pass@26BCA027` |
+| **Parent** | 1st BCA (Ward: 26BCA027) | Mr. Aruldas | `aruldas.26bca027@gmail.com` | `Parent-26BCA027` | `Parent@26BCA027` |
+| **Student** | 1st BCA | E. Archana | `archana.26bca028@college.edu` | `26BCA028` | `Pass@26BCA028` |
+| **Parent** | 1st BCA (Ward: 26BCA028) | Mr. Alagappan | `alagappan.26bca028@gmail.com` | `Parent-26BCA028` | `Parent@26BCA028` |
+| **Student** | 1st BCA | D. Rahul | `rahul.26bca029@college.edu` | `26BCA029` | `Pass@26BCA029` |
+| **Parent** | 1st BCA (Ward: 26BCA029) | Mr. Ravi Shankar | `ravi.26bca029@gmail.com` | `Parent-26BCA029` | `Parent@26BCA029` |
+| **Student** | 1st BCA | L. Shalini | `shalini.26bca030@college.edu` | `26BCA030` | `Pass@26BCA030` |
+| **Parent** | 1st BCA (Ward: 26BCA030) | Mr. Selvaraj | `selvaraj.26bca030@gmail.com` | `Parent-26BCA030` | `Parent@26BCA030` |
+| **Student** | 2nd BCA | T. Ragav | `ragav.25bca001@college.edu` | `25BCA001` | `Pass@25BCA001` |
+| **Parent** | 2nd BCA (Ward: 25BCA001) | Mr. Vasudevan | `vasudevan.25bca001@gmail.com` | `Parent-25BCA001` | `Parent@25BCA001` |
+| **Student** | 2nd BCA | N. Sandhya | `sandhya.25bca002@college.edu` | `25BCA002` | `Pass@25BCA002` |
+| **Parent** | 2nd BCA (Ward: 25BCA002) | Mr. Nagarajan | `nagarajan.25bca002@gmail.com` | `Parent-25BCA002` | `Parent@25BCA002` |
+| **Student** | 2nd BCA | B. Mukesh | `mukesh.25bca003@college.edu` | `25BCA003` | `Pass@25BCA003` |
+| **Parent** | 2nd BCA (Ward: 25BCA003) | Mr. Thirumalai | `thirumalai.25bca003@gmail.com` | `Parent-25BCA003` | `Parent@25BCA003` |
+| **Student** | 2nd BCA | A. Yamuna | `yamuna.25bca004@college.edu` | `25BCA004` | `Pass@25BCA004` |
+| **Parent** | 2nd BCA (Ward: 25BCA004) | Mr. Mohan | `mohan.25bca004@gmail.com` | `Parent-25BCA004` | `Parent@25BCA004` |
+| **Student** | 2nd BCA | V. Aravind | `aravind.25bca005@college.edu` | `25BCA005` | `Pass@25BCA005` |
+| **Parent** | 2nd BCA (Ward: 25BCA005) | Mr. Govindaraj | `govindaraj.25bca005@gmail.com` | `Parent-25BCA005` | `Parent@25BCA005` |
+| **Student** | 2nd BCA | P. Janani | `janani.25bca006@college.edu` | `25BCA006` | `Pass@25BCA006` |
+| **Parent** | 2nd BCA (Ward: 25BCA006) | Mr. Jayakumar | `jayakumar.25bca006@gmail.com` | `Parent-25BCA006` | `Parent@25BCA006` |
+| **Student** | 2nd BCA | J. Praveen | `praveen.25bca007@college.edu` | `25BCA007` | `Pass@25BCA007` |
+| **Parent** | 2nd BCA (Ward: 25BCA007) | Mr. Palanivel | `palanivel.25bca007@gmail.com` | `Parent-25BCA007` | `Parent@25BCA007` |
+| **Student** | 2nd BCA | C. Ramya | `ramya.25bca008@college.edu` | `25BCA008` | `Pass@25BCA008` |
+| **Parent** | 2nd BCA (Ward: 25BCA008) | Mr. Rajendran | `rajendran.25bca008@gmail.com` | `Parent-25BCA008` | `Parent@25BCA008` |
+| **Student** | 2nd BCA | E. Chandru | `chandru.25bca009@college.edu` | `25BCA009` | `Pass@25BCA009` |
+| **Parent** | 2nd BCA (Ward: 25BCA009) | Mr. Chandrasekhar | `chandrasekhar.25bca009@gmail.com` | `Parent-25BCA009` | `Parent@25BCA009` |
+| **Student** | 2nd BCA | D. Kaviya | `kaviya.25bca010@college.edu` | `25BCA010` | `Pass@25BCA010` |
+| **Parent** | 2nd BCA (Ward: 25BCA010) | Mr. Krishnan | `krishnan.25bca010@gmail.com` | `Parent-25BCA010` | `Parent@25BCA010` |
+| **Student** | 2nd BCA | L. Deepak | `deepak.25bca011@college.edu` | `25BCA011` | `Pass@25BCA011` |
+| **Parent** | 2nd BCA (Ward: 25BCA011) | Mr. Devarajan | `devarajan.25bca011@gmail.com` | `Parent-25BCA011` | `Parent@25BCA011` |
+| **Student** | 2nd BCA | H. Vaishnavi | `vaishnavi.25bca012@college.edu` | `25BCA012` | `Pass@25BCA012` |
+| **Parent** | 2nd BCA (Ward: 25BCA012) | Mr. Venkatesan | `venkatesan.25bca012@gmail.com` | `Parent-25BCA012` | `Parent@25BCA012` |
+| **Student** | 2nd BCA | Y. Balaji | `balaji.25bca013@college.edu` | `25BCA013` | `Pass@25BCA013` |
+| **Parent** | 2nd BCA (Ward: 25BCA013) | Mr. Baskar | `baskar.25bca013@gmail.com` | `Parent-25BCA013` | `Parent@25BCA013` |
+| **Student** | 2nd BCA | K. Menaka | `menaka.25bca014@college.edu` | `25BCA014` | `Pass@25BCA014` |
+| **Parent** | 2nd BCA (Ward: 25BCA014) | Mr. Murugesan | `murugesan.25bca014@gmail.com` | `Parent-25BCA014` | `Parent@25BCA014` |
+| **Student** | 2nd BCA | S. Rajesh | `rajesh.25bca015@college.edu` | `25BCA015` | `Pass@25BCA015` |
+| **Parent** | 2nd BCA (Ward: 25BCA015) | Mr. Ramasamy | `ramasamy.25bca015@gmail.com` | `Parent-25BCA015` | `Parent@25BCA015` |
+| **Student** | 2nd BCA | M. Roshini | `roshini.25bca016@college.edu` | `25BCA016` | `Pass@25BCA016` |
+| **Parent** | 2nd BCA (Ward: 25BCA016) | Mr. Ranganathan | `ranganathan.25bca016@gmail.com` | `Parent-25BCA016` | `Parent@25BCA016` |
+| **Student** | 2nd BCA | R. Suresh | `suresh.25bca017@college.edu` | `25BCA017` | `Pass@25BCA017` |
+| **Parent** | 2nd BCA (Ward: 25BCA017) | Mr. Subbarayan | `subbarayan.25bca017@gmail.com` | `Parent-25BCA017` | `Parent@25BCA017` |
+| **Student** | 2nd BCA | G. Bhuvaneshwari | `bhuvaneshwari.25bca018@college.edu` | `25BCA018` | `Pass@25BCA018` |
+| **Parent** | 2nd BCA (Ward: 25BCA018) | Mr. Boopalan | `boopalan.25bca018@gmail.com` | `Parent-25BCA018` | `Parent@25BCA018` |
+| **Student** | 2nd BCA | T. Kishore | `kishore.25bca019@college.edu` | `25BCA019` | `Pass@25BCA019` |
+| **Parent** | 2nd BCA (Ward: 25BCA019) | Mr. Kandasamy | `kandasamy.25bca019@gmail.com` | `Parent-25BCA019` | `Parent@25BCA019` |
+| **Student** | 2nd BCA | N. Preethi | `preethi.25bca020@college.edu` | `25BCA020` | `Pass@25BCA020` |
+| **Parent** | 2nd BCA (Ward: 25BCA020) | Mr. Pandian | `pandian.25bca020@gmail.com` | `Parent-25BCA020` | `Parent@25BCA020` |
+| **Student** | 2nd BCA | B. Ajay | `ajay.25bca021@college.edu` | `25BCA021` | `Pass@25BCA021` |
+| **Parent** | 2nd BCA (Ward: 25BCA021) | Mr. Aruldas | `aruldas.25bca021@gmail.com` | `Parent-25BCA021` | `Parent@25BCA021` |
+| **Student** | 2nd BCA | A. Archana | `archana.25bca022@college.edu` | `25BCA022` | `Pass@25BCA022` |
+| **Parent** | 2nd BCA (Ward: 25BCA022) | Mr. Alagappan | `alagappan.25bca022@gmail.com` | `Parent-25BCA022` | `Parent@25BCA022` |
+| **Student** | 2nd BCA | V. Rahul | `rahul.25bca023@college.edu` | `25BCA023` | `Pass@25BCA023` |
+| **Parent** | 2nd BCA (Ward: 25BCA023) | Mr. Ravi Shankar | `ravi.25bca023@gmail.com` | `Parent-25BCA023` | `Parent@25BCA023` |
+| **Student** | 2nd BCA | P. Shalini | `shalini.25bca024@college.edu` | `25BCA024` | `Pass@25BCA024` |
+| **Parent** | 2nd BCA (Ward: 25BCA024) | Mr. Selvaraj | `selvaraj.25bca024@gmail.com` | `Parent-25BCA024` | `Parent@25BCA024` |
+| **Student** | 2nd BCA | J. Surya | `surya.25bca025@college.edu` | `25BCA025` | `Pass@25BCA025` |
+| **Parent** | 2nd BCA (Ward: 25BCA025) | Mr. Saminathan | `saminathan.25bca025@gmail.com` | `Parent-25BCA025` | `Parent@25BCA025` |
+| **Student** | 2nd BCA | C. Mythili | `mythili.25bca026@college.edu` | `25BCA026` | `Pass@25BCA026` |
+| **Parent** | 2nd BCA (Ward: 25BCA026) | Mr. Manoharan | `manoharan.25bca026@gmail.com` | `Parent-25BCA026` | `Parent@25BCA026` |
+| **Student** | 2nd BCA | E. Pradeep | `pradeep.25bca027@college.edu` | `25BCA027` | `Pass@25BCA027` |
+| **Parent** | 2nd BCA (Ward: 25BCA027) | Mr. Perumal | `perumal.25bca027@gmail.com` | `Parent-25BCA027` | `Parent@25BCA027` |
+| **Student** | 2nd BCA | D. Anitha | `anitha.25bca028@college.edu` | `25BCA028` | `Pass@25BCA028` |
+| **Parent** | 2nd BCA (Ward: 25BCA028) | Mr. Appasamy | `appasamy.25bca028@gmail.com` | `Parent-25BCA028` | `Parent@25BCA028` |
+| **Student** | 2nd BCA | L. Gopinath | `gopinath.25bca029@college.edu` | `25BCA029` | `Pass@25BCA029` |
+| **Parent** | 2nd BCA (Ward: 25BCA029) | Mr. Gopalakrishnan | `gopalakrishnan.25bca029@gmail.com` | `Parent-25BCA029` | `Parent@25BCA029` |
+| **Student** | 2nd BCA | H. Nandhini | `nandhini.25bca030@college.edu` | `25BCA030` | `Pass@25BCA030` |
+| **Parent** | 2nd BCA (Ward: 25BCA030) | Mr. Neelamegam | `neelamegam.25bca030@gmail.com` | `Parent-25BCA030` | `Parent@25BCA030` |
+| **Student** | 3rd BCA | N. Praveen | `praveen.24bca001@college.edu` | `24BCA001` | `Pass@24BCA001` |
+| **Parent** | 3rd BCA (Ward: 24BCA001) | Mr. Palanivel | `palanivel.24bca001@gmail.com` | `Parent-24BCA001` | `Parent@24BCA001` |
+| **Student** | 3rd BCA | B. Ramya | `ramya.24bca002@college.edu` | `24BCA002` | `Pass@24BCA002` |
+| **Parent** | 3rd BCA (Ward: 24BCA002) | Mr. Rajendran | `rajendran.24bca002@gmail.com` | `Parent-24BCA002` | `Parent@24BCA002` |
+| **Student** | 3rd BCA | A. Chandru | `chandru.24bca003@college.edu` | `24BCA003` | `Pass@24BCA003` |
+| **Parent** | 3rd BCA (Ward: 24BCA003) | Mr. Chandrasekhar | `chandrasekhar.24bca003@gmail.com` | `Parent-24BCA003` | `Parent@24BCA003` |
+| **Student** | 3rd BCA | V. Kaviya | `kaviya.24bca004@college.edu` | `24BCA004` | `Pass@24BCA004` |
+| **Parent** | 3rd BCA (Ward: 24BCA004) | Mr. Krishnan | `krishnan.24bca004@gmail.com` | `Parent-24BCA004` | `Parent@24BCA004` |
+| **Student** | 3rd BCA | P. Deepak | `deepak.24bca005@college.edu` | `24BCA005` | `Pass@24BCA005` |
+| **Parent** | 3rd BCA (Ward: 24BCA005) | Mr. Devarajan | `devarajan.24bca005@gmail.com` | `Parent-24BCA005` | `Parent@24BCA005` |
+| **Student** | 3rd BCA | J. Vaishnavi | `vaishnavi.24bca006@college.edu` | `24BCA006` | `Pass@24BCA006` |
+| **Parent** | 3rd BCA (Ward: 24BCA006) | Mr. Venkatesan | `venkatesan.24bca006@gmail.com` | `Parent-24BCA006` | `Parent@24BCA006` |
+| **Student** | 3rd BCA | C. Balaji | `balaji.24bca007@college.edu` | `24BCA007` | `Pass@24BCA007` |
+| **Parent** | 3rd BCA (Ward: 24BCA007) | Mr. Baskar | `baskar.24bca007@gmail.com` | `Parent-24BCA007` | `Parent@24BCA007` |
+| **Student** | 3rd BCA | E. Menaka | `menaka.24bca008@college.edu` | `24BCA008` | `Pass@24BCA008` |
+| **Parent** | 3rd BCA (Ward: 24BCA008) | Mr. Murugesan | `murugesan.24bca008@gmail.com` | `Parent-24BCA008` | `Parent@24BCA008` |
+| **Student** | 3rd BCA | D. Rajesh | `rajesh.24bca009@college.edu` | `24BCA009` | `Pass@24BCA009` |
+| **Parent** | 3rd BCA (Ward: 24BCA009) | Mr. Ramasamy | `ramasamy.24bca009@gmail.com` | `Parent-24BCA009` | `Parent@24BCA009` |
+| **Student** | 3rd BCA | L. Roshini | `roshini.24bca010@college.edu` | `24BCA010` | `Pass@24BCA010` |
+| **Parent** | 3rd BCA (Ward: 24BCA010) | Mr. Ranganathan | `ranganathan.24bca010@gmail.com` | `Parent-24BCA010` | `Parent@24BCA010` |
+| **Student** | 3rd BCA | H. Suresh | `suresh.24bca011@college.edu` | `24BCA011` | `Pass@24BCA011` |
+| **Parent** | 3rd BCA (Ward: 24BCA011) | Mr. Subbarayan | `subbarayan.24bca011@gmail.com` | `Parent-24BCA011` | `Parent@24BCA011` |
+| **Student** | 3rd BCA | Y. Bhuvaneshwari | `bhuvaneshwari.24bca012@college.edu` | `24BCA012` | `Pass@24BCA012` |
+| **Parent** | 3rd BCA (Ward: 24BCA012) | Mr. Boopalan | `boopalan.24bca012@gmail.com` | `Parent-24BCA012` | `Parent@24BCA012` |
+| **Student** | 3rd BCA | K. Kishore | `kishore.24bca013@college.edu` | `24BCA013` | `Pass@24BCA013` |
+| **Parent** | 3rd BCA (Ward: 24BCA013) | Mr. Kandasamy | `kandasamy.24bca013@gmail.com` | `Parent-24BCA013` | `Parent@24BCA013` |
+| **Student** | 3rd BCA | S. Preethi | `preethi.24bca014@college.edu` | `24BCA014` | `Pass@24BCA014` |
+| **Parent** | 3rd BCA (Ward: 24BCA014) | Mr. Pandian | `pandian.24bca014@gmail.com` | `Parent-24BCA014` | `Parent@24BCA014` |
+| **Student** | 3rd BCA | M. Ajay | `ajay.24bca015@college.edu` | `24BCA015` | `Pass@24BCA015` |
+| **Parent** | 3rd BCA (Ward: 24BCA015) | Mr. Aruldas | `aruldas.24bca015@gmail.com` | `Parent-24BCA015` | `Parent@24BCA015` |
+| **Student** | 3rd BCA | R. Archana | `archana.24bca016@college.edu` | `24BCA016` | `Pass@24BCA016` |
+| **Parent** | 3rd BCA (Ward: 24BCA016) | Mr. Alagappan | `alagappan.24bca016@gmail.com` | `Parent-24BCA016` | `Parent@24BCA016` |
+| **Student** | 3rd BCA | G. Rahul | `rahul.24bca017@college.edu` | `24BCA017` | `Pass@24BCA017` |
+| **Parent** | 3rd BCA (Ward: 24BCA017) | Mr. Ravi Shankar | `ravi.24bca017@gmail.com` | `Parent-24BCA017` | `Parent@24BCA017` |
+| **Student** | 3rd BCA | T. Shalini | `shalini.24bca018@college.edu` | `24BCA018` | `Pass@24BCA018` |
+| **Parent** | 3rd BCA (Ward: 24BCA018) | Mr. Selvaraj | `selvaraj.24bca018@gmail.com` | `Parent-24BCA018` | `Parent@24BCA018` |
+| **Student** | 3rd BCA | N. Surya | `surya.24bca019@college.edu` | `24BCA019` | `Pass@24BCA019` |
+| **Parent** | 3rd BCA (Ward: 24BCA019) | Mr. Saminathan | `saminathan.24bca019@gmail.com` | `Parent-24BCA019` | `Parent@24BCA019` |
+| **Student** | 3rd BCA | B. Mythili | `mythili.24bca020@college.edu` | `24BCA020` | `Pass@24BCA020` |
+| **Parent** | 3rd BCA (Ward: 24BCA020) | Mr. Manoharan | `manoharan.24bca020@gmail.com` | `Parent-24BCA020` | `Parent@24BCA020` |
+| **Student** | 3rd BCA | A. Pradeep | `pradeep.24bca021@college.edu` | `24BCA021` | `Pass@24BCA021` |
+| **Parent** | 3rd BCA (Ward: 24BCA021) | Mr. Perumal | `perumal.24bca021@gmail.com` | `Parent-24BCA021` | `Parent@24BCA021` |
+| **Student** | 3rd BCA | V. Anitha | `anitha.24bca022@college.edu` | `24BCA022` | `Pass@24BCA022` |
+| **Parent** | 3rd BCA (Ward: 24BCA022) | Mr. Appasamy | `appasamy.24bca022@gmail.com` | `Parent-24BCA022` | `Parent@24BCA022` |
+| **Student** | 3rd BCA | P. Gopinath | `gopinath.24bca023@college.edu` | `24BCA023` | `Pass@24BCA023` |
+| **Parent** | 3rd BCA (Ward: 24BCA023) | Mr. Gopalakrishnan | `gopalakrishnan.24bca023@gmail.com` | `Parent-24BCA023` | `Parent@24BCA023` |
+| **Student** | 3rd BCA | J. Nandhini | `nandhini.24bca024@college.edu` | `24BCA024` | `Pass@24BCA024` |
+| **Parent** | 3rd BCA (Ward: 24BCA024) | Mr. Neelamegam | `neelamegam.24bca024@gmail.com` | `Parent-24BCA024` | `Parent@24BCA024` |
+| **Student** | 3rd BCA | C. Saravanan | `saravanan.24bca025@college.edu` | `24BCA025` | `Pass@24BCA025` |
+| **Parent** | 3rd BCA (Ward: 24BCA025) | Mr. Subramani | `subramani.24bca025@gmail.com` | `Parent-24BCA025` | `Parent@24BCA025` |
+| **Student** | 3rd BCA | E. Mahalakshmi | `mahalakshmi.24bca026@college.edu` | `24BCA026` | `Pass@24BCA026` |
+| **Parent** | 3rd BCA (Ward: 24BCA026) | Mr. Madhavan | `madhavan.24bca026@gmail.com` | `Parent-24BCA026` | `Parent@24BCA026` |
+| **Student** | 3rd BCA | D. Madhan | `madhan.24bca027@college.edu` | `24BCA027` | `Pass@24BCA027` |
+| **Parent** | 3rd BCA (Ward: 24BCA027) | Mr. Mathivanan | `mathivanan.24bca027@gmail.com` | `Parent-24BCA027` | `Parent@24BCA027` |
+| **Student** | 3rd BCA | L. Revathi | `revathi.24bca028@college.edu` | `24BCA028` | `Pass@24BCA028` |
+| **Parent** | 3rd BCA (Ward: 24BCA028) | Mr. Ramalingam | `ramalingam.24bca028@gmail.com` | `Parent-24BCA028` | `Parent@24BCA028` |
+| **Student** | 3rd BCA | H. Vetrivel | `vetrivel.24bca029@college.edu` | `24BCA029` | `Pass@24BCA029` |
+| **Parent** | 3rd BCA (Ward: 24BCA029) | Mr. Velu | `velu.24bca029@gmail.com` | `Parent-24BCA029` | `Parent@24BCA029` |
+| **Student** | 3rd BCA | Y. Priya Dharshini | `priya.24bca030@college.edu` | `24BCA030` | `Pass@24BCA030` |
+| **Parent** | 3rd BCA (Ward: 24BCA030) | Mr. Sundaram | `sundaram.24bca030@gmail.com` | `Parent-24BCA030` | `Parent@24BCA030` |
+| **Student** | 1st B.Sc Computer Science | B. Balaji | `balaji.26cs001@college.edu` | `26CS001` | `Pass@26CS001` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS001) | Mr. Baskar | `baskar.26cs001@gmail.com` | `Parent-26CS001` | `Parent@26CS001` |
+| **Student** | 1st B.Sc Computer Science | A. Menaka | `menaka.26cs002@college.edu` | `26CS002` | `Pass@26CS002` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS002) | Mr. Murugesan | `murugesan.26cs002@gmail.com` | `Parent-26CS002` | `Parent@26CS002` |
+| **Student** | 1st B.Sc Computer Science | V. Rajesh | `rajesh.26cs003@college.edu` | `26CS003` | `Pass@26CS003` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS003) | Mr. Ramasamy | `ramasamy.26cs003@gmail.com` | `Parent-26CS003` | `Parent@26CS003` |
+| **Student** | 1st B.Sc Computer Science | P. Roshini | `roshini.26cs004@college.edu` | `26CS004` | `Pass@26CS004` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS004) | Mr. Ranganathan | `ranganathan.26cs004@gmail.com` | `Parent-26CS004` | `Parent@26CS004` |
+| **Student** | 1st B.Sc Computer Science | J. Suresh | `suresh.26cs005@college.edu` | `26CS005` | `Pass@26CS005` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS005) | Mr. Subbarayan | `subbarayan.26cs005@gmail.com` | `Parent-26CS005` | `Parent@26CS005` |
+| **Student** | 1st B.Sc Computer Science | C. Bhuvaneshwari | `bhuvaneshwari.26cs006@college.edu` | `26CS006` | `Pass@26CS006` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS006) | Mr. Boopalan | `boopalan.26cs006@gmail.com` | `Parent-26CS006` | `Parent@26CS006` |
+| **Student** | 1st B.Sc Computer Science | E. Kishore | `kishore.26cs007@college.edu` | `26CS007` | `Pass@26CS007` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS007) | Mr. Kandasamy | `kandasamy.26cs007@gmail.com` | `Parent-26CS007` | `Parent@26CS007` |
+| **Student** | 1st B.Sc Computer Science | D. Preethi | `preethi.26cs008@college.edu` | `26CS008` | `Pass@26CS008` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS008) | Mr. Pandian | `pandian.26cs008@gmail.com` | `Parent-26CS008` | `Parent@26CS008` |
+| **Student** | 1st B.Sc Computer Science | L. Ajay | `ajay.26cs009@college.edu` | `26CS009` | `Pass@26CS009` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS009) | Mr. Aruldas | `aruldas.26cs009@gmail.com` | `Parent-26CS009` | `Parent@26CS009` |
+| **Student** | 1st B.Sc Computer Science | H. Archana | `archana.26cs010@college.edu` | `26CS010` | `Pass@26CS010` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS010) | Mr. Alagappan | `alagappan.26cs010@gmail.com` | `Parent-26CS010` | `Parent@26CS010` |
+| **Student** | 1st B.Sc Computer Science | Y. Rahul | `rahul.26cs011@college.edu` | `26CS011` | `Pass@26CS011` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS011) | Mr. Ravi Shankar | `ravi.26cs011@gmail.com` | `Parent-26CS011` | `Parent@26CS011` |
+| **Student** | 1st B.Sc Computer Science | K. Shalini | `shalini.26cs012@college.edu` | `26CS012` | `Pass@26CS012` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS012) | Mr. Selvaraj | `selvaraj.26cs012@gmail.com` | `Parent-26CS012` | `Parent@26CS012` |
+| **Student** | 1st B.Sc Computer Science | S. Surya | `surya.26cs013@college.edu` | `26CS013` | `Pass@26CS013` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS013) | Mr. Saminathan | `saminathan.26cs013@gmail.com` | `Parent-26CS013` | `Parent@26CS013` |
+| **Student** | 1st B.Sc Computer Science | M. Mythili | `mythili.26cs014@college.edu` | `26CS014` | `Pass@26CS014` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS014) | Mr. Manoharan | `manoharan.26cs014@gmail.com` | `Parent-26CS014` | `Parent@26CS014` |
+| **Student** | 1st B.Sc Computer Science | R. Pradeep | `pradeep.26cs015@college.edu` | `26CS015` | `Pass@26CS015` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS015) | Mr. Perumal | `perumal.26cs015@gmail.com` | `Parent-26CS015` | `Parent@26CS015` |
+| **Student** | 1st B.Sc Computer Science | G. Anitha | `anitha.26cs016@college.edu` | `26CS016` | `Pass@26CS016` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS016) | Mr. Appasamy | `appasamy.26cs016@gmail.com` | `Parent-26CS016` | `Parent@26CS016` |
+| **Student** | 1st B.Sc Computer Science | T. Gopinath | `gopinath.26cs017@college.edu` | `26CS017` | `Pass@26CS017` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS017) | Mr. Gopalakrishnan | `gopalakrishnan.26cs017@gmail.com` | `Parent-26CS017` | `Parent@26CS017` |
+| **Student** | 1st B.Sc Computer Science | N. Nandhini | `nandhini.26cs018@college.edu` | `26CS018` | `Pass@26CS018` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS018) | Mr. Neelamegam | `neelamegam.26cs018@gmail.com` | `Parent-26CS018` | `Parent@26CS018` |
+| **Student** | 1st B.Sc Computer Science | B. Saravanan | `saravanan.26cs019@college.edu` | `26CS019` | `Pass@26CS019` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS019) | Mr. Subramani | `subramani.26cs019@gmail.com` | `Parent-26CS019` | `Parent@26CS019` |
+| **Student** | 1st B.Sc Computer Science | A. Mahalakshmi | `mahalakshmi.26cs020@college.edu` | `26CS020` | `Pass@26CS020` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS020) | Mr. Madhavan | `madhavan.26cs020@gmail.com` | `Parent-26CS020` | `Parent@26CS020` |
+| **Student** | 1st B.Sc Computer Science | V. Madhan | `madhan.26cs021@college.edu` | `26CS021` | `Pass@26CS021` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS021) | Mr. Mathivanan | `mathivanan.26cs021@gmail.com` | `Parent-26CS021` | `Parent@26CS021` |
+| **Student** | 1st B.Sc Computer Science | P. Revathi | `revathi.26cs022@college.edu` | `26CS022` | `Pass@26CS022` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS022) | Mr. Ramalingam | `ramalingam.26cs022@gmail.com` | `Parent-26CS022` | `Parent@26CS022` |
+| **Student** | 1st B.Sc Computer Science | J. Vetrivel | `vetrivel.26cs023@college.edu` | `26CS023` | `Pass@26CS023` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS023) | Mr. Velu | `velu.26cs023@gmail.com` | `Parent-26CS023` | `Parent@26CS023` |
+| **Student** | 1st B.Sc Computer Science | C. Priya Dharshini | `priya.26cs024@college.edu` | `26CS024` | `Pass@26CS024` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS024) | Mr. Sundaram | `sundaram.26cs024@gmail.com` | `Parent-26CS024` | `Parent@26CS024` |
+| **Student** | 1st B.Sc Computer Science | E. Arun Kumar | `arun.26cs025@college.edu` | `26CS025` | `Pass@26CS025` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS025) | Mr. Ramesh Kumar | `ramesh.26cs025@gmail.com` | `Parent-26CS025` | `Parent@26CS025` |
+| **Student** | 1st B.Sc Computer Science | D. Kavitha | `kavitha.26cs026@college.edu` | `26CS026` | `Pass@26CS026` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS026) | Mr. Radhakrishnan | `radhakrishnan.26cs026@gmail.com` | `Parent-26CS026` | `Parent@26CS026` |
+| **Student** | 1st B.Sc Computer Science | L. Vignesh | `vignesh.26cs027@college.edu` | `26CS027` | `Pass@26CS027` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS027) | Mr. Mani | `mani.26cs027@gmail.com` | `Parent-26CS027` | `Parent@26CS027` |
+| **Student** | 1st B.Sc Computer Science | H. Ananya Sri | `ananya.26cs028@college.edu` | `26CS028` | `Pass@26CS028` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS028) | Mr. Thangavel | `thangavel.26cs028@gmail.com` | `Parent-26CS028` | `Parent@26CS028` |
+| **Student** | 1st B.Sc Computer Science | Y. Dinesh Kumar | `dinesh.26cs029@college.edu` | `26CS029` | `Pass@26CS029` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS029) | Mr. Ganesan | `ganesan.26cs029@gmail.com` | `Parent-26CS029` | `Parent@26CS029` |
+| **Student** | 1st B.Sc Computer Science | K. Divya Bharathi | `divya.26cs030@college.edu` | `26CS030` | `Pass@26CS030` |
+| **Parent** | 1st B.Sc Computer Science (Ward: 26CS030) | Mr. Balan | `balan.26cs030@gmail.com` | `Parent-26CS030` | `Parent@26CS030` |
+| **Student** | 2nd B.Sc Computer Science | A. Kishore | `kishore.25cs001@college.edu` | `25CS001` | `Pass@25CS001` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS001) | Mr. Kandasamy | `kandasamy.25cs001@gmail.com` | `Parent-25CS001` | `Parent@25CS001` |
+| **Student** | 2nd B.Sc Computer Science | V. Preethi | `preethi.25cs002@college.edu` | `25CS002` | `Pass@25CS002` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS002) | Mr. Pandian | `pandian.25cs002@gmail.com` | `Parent-25CS002` | `Parent@25CS002` |
+| **Student** | 2nd B.Sc Computer Science | P. Ajay | `ajay.25cs003@college.edu` | `25CS003` | `Pass@25CS003` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS003) | Mr. Aruldas | `aruldas.25cs003@gmail.com` | `Parent-25CS003` | `Parent@25CS003` |
+| **Student** | 2nd B.Sc Computer Science | J. Archana | `archana.25cs004@college.edu` | `25CS004` | `Pass@25CS004` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS004) | Mr. Alagappan | `alagappan.25cs004@gmail.com` | `Parent-25CS004` | `Parent@25CS004` |
+| **Student** | 2nd B.Sc Computer Science | C. Rahul | `rahul.25cs005@college.edu` | `25CS005` | `Pass@25CS005` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS005) | Mr. Ravi Shankar | `ravi.25cs005@gmail.com` | `Parent-25CS005` | `Parent@25CS005` |
+| **Student** | 2nd B.Sc Computer Science | E. Shalini | `shalini.25cs006@college.edu` | `25CS006` | `Pass@25CS006` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS006) | Mr. Selvaraj | `selvaraj.25cs006@gmail.com` | `Parent-25CS006` | `Parent@25CS006` |
+| **Student** | 2nd B.Sc Computer Science | D. Surya | `surya.25cs007@college.edu` | `25CS007` | `Pass@25CS007` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS007) | Mr. Saminathan | `saminathan.25cs007@gmail.com` | `Parent-25CS007` | `Parent@25CS007` |
+| **Student** | 2nd B.Sc Computer Science | L. Mythili | `mythili.25cs008@college.edu` | `25CS008` | `Pass@25CS008` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS008) | Mr. Manoharan | `manoharan.25cs008@gmail.com` | `Parent-25CS008` | `Parent@25CS008` |
+| **Student** | 2nd B.Sc Computer Science | H. Pradeep | `pradeep.25cs009@college.edu` | `25CS009` | `Pass@25CS009` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS009) | Mr. Perumal | `perumal.25cs009@gmail.com` | `Parent-25CS009` | `Parent@25CS009` |
+| **Student** | 2nd B.Sc Computer Science | Y. Anitha | `anitha.25cs010@college.edu` | `25CS010` | `Pass@25CS010` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS010) | Mr. Appasamy | `appasamy.25cs010@gmail.com` | `Parent-25CS010` | `Parent@25CS010` |
+| **Student** | 2nd B.Sc Computer Science | K. Gopinath | `gopinath.25cs011@college.edu` | `25CS011` | `Pass@25CS011` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS011) | Mr. Gopalakrishnan | `gopalakrishnan.25cs011@gmail.com` | `Parent-25CS011` | `Parent@25CS011` |
+| **Student** | 2nd B.Sc Computer Science | S. Nandhini | `nandhini.25cs012@college.edu` | `25CS012` | `Pass@25CS012` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS012) | Mr. Neelamegam | `neelamegam.25cs012@gmail.com` | `Parent-25CS012` | `Parent@25CS012` |
+| **Student** | 2nd B.Sc Computer Science | M. Saravanan | `saravanan.25cs013@college.edu` | `25CS013` | `Pass@25CS013` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS013) | Mr. Subramani | `subramani.25cs013@gmail.com` | `Parent-25CS013` | `Parent@25CS013` |
+| **Student** | 2nd B.Sc Computer Science | R. Mahalakshmi | `mahalakshmi.25cs014@college.edu` | `25CS014` | `Pass@25CS014` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS014) | Mr. Madhavan | `madhavan.25cs014@gmail.com` | `Parent-25CS014` | `Parent@25CS014` |
+| **Student** | 2nd B.Sc Computer Science | G. Madhan | `madhan.25cs015@college.edu` | `25CS015` | `Pass@25CS015` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS015) | Mr. Mathivanan | `mathivanan.25cs015@gmail.com` | `Parent-25CS015` | `Parent@25CS015` |
+| **Student** | 2nd B.Sc Computer Science | T. Revathi | `revathi.25cs016@college.edu` | `25CS016` | `Pass@25CS016` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS016) | Mr. Ramalingam | `ramalingam.25cs016@gmail.com` | `Parent-25CS016` | `Parent@25CS016` |
+| **Student** | 2nd B.Sc Computer Science | N. Vetrivel | `vetrivel.25cs017@college.edu` | `25CS017` | `Pass@25CS017` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS017) | Mr. Velu | `velu.25cs017@gmail.com` | `Parent-25CS017` | `Parent@25CS017` |
+| **Student** | 2nd B.Sc Computer Science | B. Priya Dharshini | `priya.25cs018@college.edu` | `25CS018` | `Pass@25CS018` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS018) | Mr. Sundaram | `sundaram.25cs018@gmail.com` | `Parent-25CS018` | `Parent@25CS018` |
+| **Student** | 2nd B.Sc Computer Science | A. Arun Kumar | `arun.25cs019@college.edu` | `25CS019` | `Pass@25CS019` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS019) | Mr. Ramesh Kumar | `ramesh.25cs019@gmail.com` | `Parent-25CS019` | `Parent@25CS019` |
+| **Student** | 2nd B.Sc Computer Science | V. Kavitha | `kavitha.25cs020@college.edu` | `25CS020` | `Pass@25CS020` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS020) | Mr. Radhakrishnan | `radhakrishnan.25cs020@gmail.com` | `Parent-25CS020` | `Parent@25CS020` |
+| **Student** | 2nd B.Sc Computer Science | P. Vignesh | `vignesh.25cs021@college.edu` | `25CS021` | `Pass@25CS021` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS021) | Mr. Mani | `mani.25cs021@gmail.com` | `Parent-25CS021` | `Parent@25CS021` |
+| **Student** | 2nd B.Sc Computer Science | J. Ananya Sri | `ananya.25cs022@college.edu` | `25CS022` | `Pass@25CS022` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS022) | Mr. Thangavel | `thangavel.25cs022@gmail.com` | `Parent-25CS022` | `Parent@25CS022` |
+| **Student** | 2nd B.Sc Computer Science | C. Dinesh Kumar | `dinesh.25cs023@college.edu` | `25CS023` | `Pass@25CS023` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS023) | Mr. Ganesan | `ganesan.25cs023@gmail.com` | `Parent-25CS023` | `Parent@25CS023` |
+| **Student** | 2nd B.Sc Computer Science | E. Divya Bharathi | `divya.25cs024@college.edu` | `25CS024` | `Pass@25CS024` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS024) | Mr. Balan | `balan.25cs024@gmail.com` | `Parent-25CS024` | `Parent@25CS024` |
+| **Student** | 2nd B.Sc Computer Science | D. Sanjay | `sanjay.25cs025@college.edu` | `25CS025` | `Pass@25CS025` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS025) | Mr. Natarajan | `natarajan.25cs025@gmail.com` | `Parent-25CS025` | `Parent@25CS025` |
+| **Student** | 2nd B.Sc Computer Science | L. Keerthana | `keerthana.25cs026@college.edu` | `25CS026` | `Pass@25CS026` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS026) | Mr. Velmurugan | `velmurugan.25cs026@gmail.com` | `Parent-25CS026` | `Parent@25CS026` |
+| **Student** | 2nd B.Sc Computer Science | H. Harish Raghav | `harish.25cs027@college.edu` | `25CS027` | `Pass@25CS027` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS027) | Mr. Arumugam | `arumugam.25cs027@gmail.com` | `Parent-25CS027` | `Parent@25CS027` |
+| **Student** | 2nd B.Sc Computer Science | Y. Deepa Lakshmi | `deepa.25cs028@college.edu` | `25CS028` | `Pass@25CS028` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS028) | Mr. Krishnan | `krishnan.25cs028@gmail.com` | `Parent-25CS028` | `Parent@25CS028` |
+| **Student** | 2nd B.Sc Computer Science | K. Manoj Kumar | `manoj.25cs029@college.edu` | `25CS029` | `Pass@25CS029` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS029) | Mr. Annamalai | `annamalai.25cs029@gmail.com` | `Parent-25CS029` | `Parent@25CS029` |
+| **Student** | 2nd B.Sc Computer Science | S. Swetha | `swetha.25cs030@college.edu` | `25CS030` | `Pass@25CS030` |
+| **Parent** | 2nd B.Sc Computer Science (Ward: 25CS030) | Mr. Selvam | `selvam.25cs030@gmail.com` | `Parent-25CS030` | `Parent@25CS030` |
+| **Student** | 3rd B.Sc Computer Science | V. Surya | `surya.24cs001@college.edu` | `24CS001` | `Pass@24CS001` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS001) | Mr. Saminathan | `saminathan.24cs001@gmail.com` | `Parent-24CS001` | `Parent@24CS001` |
+| **Student** | 3rd B.Sc Computer Science | P. Mythili | `mythili.24cs002@college.edu` | `24CS002` | `Pass@24CS002` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS002) | Mr. Manoharan | `manoharan.24cs002@gmail.com` | `Parent-24CS002` | `Parent@24CS002` |
+| **Student** | 3rd B.Sc Computer Science | J. Pradeep | `pradeep.24cs003@college.edu` | `24CS003` | `Pass@24CS003` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS003) | Mr. Perumal | `perumal.24cs003@gmail.com` | `Parent-24CS003` | `Parent@24CS003` |
+| **Student** | 3rd B.Sc Computer Science | C. Anitha | `anitha.24cs004@college.edu` | `24CS004` | `Pass@24CS004` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS004) | Mr. Appasamy | `appasamy.24cs004@gmail.com` | `Parent-24CS004` | `Parent@24CS004` |
+| **Student** | 3rd B.Sc Computer Science | E. Gopinath | `gopinath.24cs005@college.edu` | `24CS005` | `Pass@24CS005` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS005) | Mr. Gopalakrishnan | `gopalakrishnan.24cs005@gmail.com` | `Parent-24CS005` | `Parent@24CS005` |
+| **Student** | 3rd B.Sc Computer Science | D. Nandhini | `nandhini.24cs006@college.edu` | `24CS006` | `Pass@24CS006` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS006) | Mr. Neelamegam | `neelamegam.24cs006@gmail.com` | `Parent-24CS006` | `Parent@24CS006` |
+| **Student** | 3rd B.Sc Computer Science | L. Saravanan | `saravanan.24cs007@college.edu` | `24CS007` | `Pass@24CS007` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS007) | Mr. Subramani | `subramani.24cs007@gmail.com` | `Parent-24CS007` | `Parent@24CS007` |
+| **Student** | 3rd B.Sc Computer Science | H. Mahalakshmi | `mahalakshmi.24cs008@college.edu` | `24CS008` | `Pass@24CS008` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS008) | Mr. Madhavan | `madhavan.24cs008@gmail.com` | `Parent-24CS008` | `Parent@24CS008` |
+| **Student** | 3rd B.Sc Computer Science | Y. Madhan | `madhan.24cs009@college.edu` | `24CS009` | `Pass@24CS009` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS009) | Mr. Mathivanan | `mathivanan.24cs009@gmail.com` | `Parent-24CS009` | `Parent@24CS009` |
+| **Student** | 3rd B.Sc Computer Science | K. Revathi | `revathi.24cs010@college.edu` | `24CS010` | `Pass@24CS010` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS010) | Mr. Ramalingam | `ramalingam.24cs010@gmail.com` | `Parent-24CS010` | `Parent@24CS010` |
+| **Student** | 3rd B.Sc Computer Science | S. Vetrivel | `vetrivel.24cs011@college.edu` | `24CS011` | `Pass@24CS011` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS011) | Mr. Velu | `velu.24cs011@gmail.com` | `Parent-24CS011` | `Parent@24CS011` |
+| **Student** | 3rd B.Sc Computer Science | M. Priya Dharshini | `priya.24cs012@college.edu` | `24CS012` | `Pass@24CS012` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS012) | Mr. Sundaram | `sundaram.24cs012@gmail.com` | `Parent-24CS012` | `Parent@24CS012` |
+| **Student** | 3rd B.Sc Computer Science | R. Arun Kumar | `arun.24cs013@college.edu` | `24CS013` | `Pass@24CS013` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS013) | Mr. Ramesh Kumar | `ramesh.24cs013@gmail.com` | `Parent-24CS013` | `Parent@24CS013` |
+| **Student** | 3rd B.Sc Computer Science | G. Kavitha | `kavitha.24cs014@college.edu` | `24CS014` | `Pass@24CS014` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS014) | Mr. Radhakrishnan | `radhakrishnan.24cs014@gmail.com` | `Parent-24CS014` | `Parent@24CS014` |
+| **Student** | 3rd B.Sc Computer Science | T. Vignesh | `vignesh.24cs015@college.edu` | `24CS015` | `Pass@24CS015` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS015) | Mr. Mani | `mani.24cs015@gmail.com` | `Parent-24CS015` | `Parent@24CS015` |
+| **Student** | 3rd B.Sc Computer Science | N. Ananya Sri | `ananya.24cs016@college.edu` | `24CS016` | `Pass@24CS016` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS016) | Mr. Thangavel | `thangavel.24cs016@gmail.com` | `Parent-24CS016` | `Parent@24CS016` |
+| **Student** | 3rd B.Sc Computer Science | B. Dinesh Kumar | `dinesh.24cs017@college.edu` | `24CS017` | `Pass@24CS017` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS017) | Mr. Ganesan | `ganesan.24cs017@gmail.com` | `Parent-24CS017` | `Parent@24CS017` |
+| **Student** | 3rd B.Sc Computer Science | A. Divya Bharathi | `divya.24cs018@college.edu` | `24CS018` | `Pass@24CS018` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS018) | Mr. Balan | `balan.24cs018@gmail.com` | `Parent-24CS018` | `Parent@24CS018` |
+| **Student** | 3rd B.Sc Computer Science | V. Sanjay | `sanjay.24cs019@college.edu` | `24CS019` | `Pass@24CS019` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS019) | Mr. Natarajan | `natarajan.24cs019@gmail.com` | `Parent-24CS019` | `Parent@24CS019` |
+| **Student** | 3rd B.Sc Computer Science | P. Keerthana | `keerthana.24cs020@college.edu` | `24CS020` | `Pass@24CS020` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS020) | Mr. Velmurugan | `velmurugan.24cs020@gmail.com` | `Parent-24CS020` | `Parent@24CS020` |
+| **Student** | 3rd B.Sc Computer Science | J. Harish Raghav | `harish.24cs021@college.edu` | `24CS021` | `Pass@24CS021` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS021) | Mr. Arumugam | `arumugam.24cs021@gmail.com` | `Parent-24CS021` | `Parent@24CS021` |
+| **Student** | 3rd B.Sc Computer Science | C. Deepa Lakshmi | `deepa.24cs022@college.edu` | `24CS022` | `Pass@24CS022` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS022) | Mr. Krishnan | `krishnan.24cs022@gmail.com` | `Parent-24CS022` | `Parent@24CS022` |
+| **Student** | 3rd B.Sc Computer Science | E. Manoj Kumar | `manoj.24cs023@college.edu` | `24CS023` | `Pass@24CS023` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS023) | Mr. Annamalai | `annamalai.24cs023@gmail.com` | `Parent-24CS023` | `Parent@24CS023` |
+| **Student** | 3rd B.Sc Computer Science | D. Swetha | `swetha.24cs024@college.edu` | `24CS024` | `Pass@24CS024` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS024) | Mr. Selvam | `selvam.24cs024@gmail.com` | `Parent-24CS024` | `Parent@24CS024` |
+| **Student** | 3rd B.Sc Computer Science | L. Naveen Prasath | `naveen.24cs025@college.edu` | `24CS025` | `Pass@24CS025` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS025) | Mr. Ramanathan | `ramanathan.24cs025@gmail.com` | `Parent-24CS025` | `Parent@24CS025` |
+| **Student** | 3rd B.Sc Computer Science | H. Sneha | `sneha.24cs026@college.edu` | `24CS026` | `Pass@24CS026` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS026) | Mr. Muthukumar | `muthukumar.24cs026@gmail.com` | `Parent-24CS026` | `Parent@24CS026` |
+| **Student** | 3rd B.Sc Computer Science | Y. Gokulnath | `gokulnath.24cs027@college.edu` | `24CS027` | `Pass@24CS027` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS027) | Mr. Palanisamy | `palanisamy.24cs027@gmail.com` | `Parent-24CS027` | `Parent@24CS027` |
+| **Student** | 3rd B.Sc Computer Science | K. Pavithra | `pavithra.24cs028@college.edu` | `24CS028` | `Pass@24CS028` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS028) | Mr. Chandran | `chandran.24cs028@gmail.com` | `Parent-24CS028` | `Parent@24CS028` |
+| **Student** | 3rd B.Sc Computer Science | S. Karthikeyan | `karthikeyan.24cs029@college.edu` | `24CS029` | `Pass@24CS029` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS029) | Mr. Jayaraman | `jayaraman.24cs029@gmail.com` | `Parent-24CS029` | `Parent@24CS029` |
+| **Student** | 3rd B.Sc Computer Science | M. Abinaya | `abinaya.24cs030@college.edu` | `24CS030` | `Pass@24CS030` |
+| **Parent** | 3rd B.Sc Computer Science (Ward: 24CS030) | Mr. Durairaj | `durairaj.24cs030@gmail.com` | `Parent-24CS030` | `Parent@24CS030` |
